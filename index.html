@@ -1,0 +1,2257 @@
+<!-- Projecte LA TRIBUNA v27 -->
+
+<!-- Millora: marc textos parallax -->
+<!-- Millora: slideshow automàtic funcionant correctament -->
+<!-- Millora: franja inferior més estreta -->
+<!-- Millora: icona menú animació GIF. Limitació ample 1200px amb MQs-->
+<!-- Revisió i correccions vàries -->
+<!-- Millora: barra navegació flotant en 2 línies -->
+<!-- Millora: secció receptes amb fitxes individuals -->
+<!-- Millora: barra navegació retràctil, botó menú millorat, reenquadre ommmm -->
+<!-- Millora: incorporació dels 4 videos de Youtube --><!-- engrandiment botó menú -->
+<!-- Millora: responsive -->
+<!-- Millora: incorporació esdeveniments dispositius tàctils: dropdown dissenyat per Kate Morley -->
+<!-- Millora: engrandir botons x esdeveniments tàctils; conversió dels menus a touch-friendly (prova simulació link INFO amb JavaScript function goInfo) -->
+<!-- Millora Touch-Friendly: duplicació barra bar-laptop, la segona tàctil, que activaré via CSS @media (hover: hover) -->
+<!-- Millora: NAVBAR x format laptop estàtica: elimino onclick="closeNav()" de bar-laptop; augmento padding superior seccions i tb de la classe .apartats-info-->
+<!-- Millora: botó x fitxa equip mòbil; icona fons parallax més clara; retoc text receptes x mòbil; canvi tipos que no es veien bé per formats petits -->
+
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ioga El Pou de Llum - La Tribuna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <link rel="stylesheet" href="css/estils27.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><!-- afegim AQUEST full estils de fontawesome per integrar les icones de xxss -->
+
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <script src="js/script27.js"></script>
+  <script src="js/Dropdown.src.js"></script>
+
+</head>
+
+<body>
+
+  <!-- A. HEADER ###############################-->
+  <header class="site-header">
+
+      <!-- Barra navegació superior FLOTANT pantalla gran -->
+      <div id="navbar">
+        <div class="grid-barra-flot">
+
+          <div class="centres-barra">
+            <p>Centres de Ioga Iyengar · <span>El Pou de Llum · La Tribuna</span></p>
+          </div>
+
+          <ul id="bar-laptop" class="bar">
+            <li><a href="#iyengar">Ioga Iyengar</a></li>
+            <li><a href="#centres">Els centres</a>
+              <ul>
+                <li><a href="#historia">Història</a></li>
+                <li><a href="#pou">EL POU DE LLUM - Figueres</a></li>
+                <li><a href="#tribuna">LA TRIBUNA - Olot</a></li>
+              </ul>
+            </li>
+            <li><a href="#equip">Equip docent</a></li>
+            <li><a href="#info">Informació</a>
+              <ul>
+                <li><a href="#calendari">Calendari</a></li>
+                <li><a href="#horaris">Horaris</a></li>
+                <li><a href="#tarifes">Tarifes</a></li>
+                <li><a href="#consells">Consells pràctics</a></li>
+                <li><a href="#material">Material</a></li>
+                <li><a href="#bibliografia">Bibliografia</a></li>
+              </ul>
+            </li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#receptes">Receptes</a></li>
+          </ul><!-- #bar-laptop -->
+
+          <ul id="bar-nohover" class="bar">
+            <li><a href="#iyengar" onclick="closeNav()">Ioga Iyengar</a></li>
+            <li><a href="#">Els centres<i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="#historia" onclick="closeNav()">Història</a></li>
+                <li><a href="#pou" onclick="closeNav()">EL POU DE LLUM - Figueres</a></li>
+                <li><a href="#tribuna" onclick="closeNav()">LA TRIBUNA - Olot</a></li>
+              </ul>
+            </li>
+            <li><a href="#equip" onclick="closeNav()">Equip docent</a></li>
+            <li><a href="#">Informació<i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="#calendari" onclick="closeNav()">Calendari</a></li>
+                <li><a href="#horaris" onclick="closeNav()">Horaris</a></li>
+                <li><a href="#tarifes" onclick="closeNav()">Tarifes</a></li>
+                <li><a href="#consells" onclick="closeNav()">Consells pràctics</a></li>
+                <li><a href="#material" onclick="closeNav()">Material</a></li>
+                <li><a href="#bibliografia" onclick="closeNav()">Bibliografia</a></li>
+              </ul>
+            </li>
+            <li><a href="#faqs" onclick="closeNav()">FAQs</a></li>
+            <li><a href="#receptes" onclick="closeNav()">Receptes</a></li>
+          </ul><!-- #bar-nohover -->
+
+          <ul class="xarxes">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+              <ul>
+                <li><a href="https://ca-es.facebook.com/iogaelpou" target="_blank"><i class="fab fa-facebook-f"></i><span>EL POU DE LLUM</span></a></li>
+                <li><a href="https://ca-es.facebook.com/iogalatribuna" target="_blank"><i class="fab fa-facebook-f"></i><span>LA TRIBUNA</span></a></li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a>
+              <ul>
+                <li><a href="https://www.instagram.com/iogaelpou.figueres/" target="_blank"><i class="fab fa-instagram"></i><span>EL POU DE LLUM</span></a></li>
+                <li><a href="https://www.instagram.com/iogalatribuna.olot/" target="_blank"><i class="fab fa-instagram"></i><span>LA TRIBUNA</span></a></li>
+              </ul>
+            </li>
+            <li class="youtube"><a href="#"><i class="fab fa-youtube"></i></a>
+              <ul>
+                <li><a href="https://www.youtube.com/watch?v=tBMtbuSS4BI" target="_blank"><i class="fab fa-youtube"></i><span>Ioga per a nens</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=HldhHHzOlmE" target="_blank"><i class="fab fa-youtube"></i><span>Ioga El Pou de Llum</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=nutCaTf4A1k/" target="_blank"><i class="fab fa-youtube"></i><span>Ioga La Tribuna</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=qZ78g5w9FIY" target="_blank"><i class="fab fa-youtube"></i><span>Ioga La Tribuna</span></a></li>
+              </ul>
+
+            </li>
+          </ul><!-- .xarxes -->
+
+          <div id="om">
+            <!-- fico la imatge en css com a background-image, per evitar problemes de tamany, vull que s'ajusti automàticament a l'espai disponible -->
+          </div>
+
+          <div class="closebtn">
+            <span onclick="closeNav()">&times;</span>
+          </div>
+
+        </div><!-- .grid-barra-flot -->
+      </div><!-- #navbar (barra navegació FLOTANT)-->
+
+      <!-- Barra navegació superior FLOTANT x mòbil -->
+      <div id="mobile-navbar">
+        <div class="grid-barra-flot">
+
+          <div class="centres-barra">
+            <p>Centres de Ioga Iyengar · <span>El Pou de Llum · La Tribuna</span></p>
+          </div>
+
+          <ul id="bar-mobil" class="bar"><!-- Classe "dropdown" permet activar arxiu Dropdown.src.js -->
+            <li><a href="#iyengar" onclick="closeMobileNav()">Iyengar</a></li>
+            <li><a href="#">Centres<i class="fas fa-caret-down"></i></a>
+              <ul id="ul-centres">
+                <li><a href="#historia" onclick="closeMobileNav()">Història</a></li>
+                <li><a href="#pou" onclick="closeMobileNav()">EL POU DE LLUM - Figueres</a></li>
+                <li><a href="#tribuna" onclick="closeMobileNav()">LA TRIBUNA - Olot</a></li>
+              </ul>
+            </li>
+            <li><a href="#equip" onclick="closeMobileNav()">Equip</a></li>
+            <li><a href="#">Info<i class="fas fa-caret-down"></i></a>
+              <ul id="ul-info">
+                <li><a href="#calendari" onclick="closeMobileNav()">Calendari</a></li>
+                <li><a href="#horaris" onclick="closeMobileNav()">Horaris</a></li>
+                <li><a href="#tarifes" onclick="closeMobileNav()">Tarifes</a></li>
+                <li><a href="#consells" onclick="closeMobileNav()">Consells pràctics</a></li>
+                <li><a href="#material" onclick="closeMobileNav()">Material</a></li>
+                <li><a href="#bibliografia" onclick="closeMobileNav()">Bibliografia</a></li>
+              </ul>
+            </li>
+            <li><a href="#faqs" onclick="closeMobileNav()">FAQs</a></li>
+            <li><a href="#receptes" onclick="closeMobileNav()">Receptes</a></li>
+            <li id="xarxes-mobil"><a href="#">Xarxes<i class="fas fa-caret-down"></i></a>
+              <ul id="ul-xarxes">
+                <li><a href="https://ca-es.facebook.com/iogaelpou" target="_blank" onclick="closeMobileNav()"><i class="fab fa-facebook-f"></i><span>El Pou de Llum</span></a></li>
+                <li><a href="https://ca-es.facebook.com/iogalatribuna" target="_blank" onclick="closeMobileNav()"><i class="fab fa-facebook-f"></i><span>La Tribuna</span></a></li>
+                <li><a href="https://www.instagram.com/iogaelpou.figueres/" target="_blank" onclick="closeMobileNav()"><i class="fab fa-instagram"></i><span>El Pou de Llum</span></a></li>
+                <li><a href="https://www.instagram.com/iogalatribuna.olot/" target="_blank" onclick="closeMobileNav()"><i class="fab fa-instagram"></i><span>La Tribuna</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=tBMtbuSS4BI" target="_blank" onclick="closeMobileNav()"><i class="fab fa-youtube"></i><span>Ioga per a nens</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=HldhHHzOlmE" target="_blank" onclick="closeMobileNav()"><i class="fab fa-youtube"></i><span>Ioga El Pou de Llum</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=nutCaTf4A1k/" target="_blank" onclick="closeMobileNav()"><i class="fab fa-youtube"></i><span>Ioga La Tribuna</span></a></li>
+                <li><a href="https://www.youtube.com/watch?v=qZ78g5w9FIY" target="_blank" onclick="closeMobileNav()"><i class="fab fa-youtube"></i><span>Ioga La Tribuna</span></a></li>
+              </ul>
+            </li>
+          </ul><!-- .bar-mobil -->
+
+          <div class="closebtn">
+            <span onclick="closeNav()">&times;</span>
+          </div>
+
+        </div><!-- .grid-barra-flot -->
+      </div><!-- #mobile-navbar -->
+
+
+
+      <!-- Botó-Imago flotant lateral dret -->
+      <div id="logo-menu" class="menu" onclick="openNav()">
+        <img src="img/LogoMenuLaTribuna-300x300-c.gif" alt="Logotip">
+      </div>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div id="slide1" class="mySlides fade">
+        </div>
+
+        <div id="slide2" class="mySlides fade">
+        </div>
+
+        <div id="slide3" class="mySlides fade">
+        </div>
+
+        <div id="slide4" class="mySlides fade">
+        </div>
+
+        <div id="slide5" class="mySlides fade">
+        </div>
+
+      </div><!-- Slideshow container -->
+
+      <div class="container-logo">
+        <div class="seus-logo">
+          <div class="seus seu1">
+            <h2>El Pou de Llum</h2>
+            <p>FIGUERES</p>
+          </div>
+          <div class="logo">
+            <img src="img/Logo-LaTribuna-petit.png" alt="Logotip">
+          </div>
+          <div class="seus seu2">
+            <h2>La Tribuna</h2>
+            <p>OLOT</p>
+          </div>
+
+          <div class="subtitol">
+            <h5>Centres  de  Ioga  Iyengar</h5>
+          </div>
+        </div>
+
+      </div><!-- logotip -->
+
+  </header>
+
+
+
+  <!-- A2. Frase Parallax #####################-->
+  <div class="contingut-parallax parallax fons-a2">
+    <div class="auxiliar">
+      <div class="orla-parallax">
+        <div class="text-parallax">
+          <h4>L'objectiu i la culminació del ioga és la visió de l'esperit, però té una gran quantitat de beneficiosos efectes col·laterals com en són la salut, la felicitat, la pau i l'equilibri.</h4>
+          <p>B.K.S. Iyengar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- B. Section IOGA IYENGAR ################-->
+  <section id="iyengar" class="seccio">
+
+    <div class="contingut titol-seccio">
+      <h3>Ioga Iyengar</h3>
+    </div>
+
+    <div class="reticula grid-iyengar">
+      <div class="presentacio">
+        <h4>Presentació</h4>
+        <p>El ioga és un art, una ciència i una saviesa mil·lenària que té com a finalitat integrar els tres aspectes de la personalitat -cos, ment i emocions- per tal de retrobar-ne l’estat natural: l’harmonia interior.</p>
+        <p>El nostre cos conté molts tipus de cèl.lules, cadascuna amb funcions diverses i vida pròpia. Aquestes cèl.lules són les perles de la vida. Mitjançant la pràctica de les postures de ioga o asanes, (nom en sànscrit), aconseguim purificar i regenerar les nostres cèl.lules, és a dir, tot el nostre cos, així com fer-nos més àgils i flexibles.</p>
+        <p>Seguim fidelment l’ensenyament del Mestre B.K.S. Iyengar, que es caracteritza pels alineaments, la precisió, la intensitat i el dinamisme, i els diferents suports, que el fan útil i accessible per a tothom (cinturons, mantes, totxos, cadires, cordes, etc.).</p>
+        <p>Aquest mètode és a l’abast de totes les persones. No importa edat, sexe, religió o raça, elàstics o rígids, sans o no.  Qui vol, pot practicar-ne. Si el nostre cos no hi arriba, utilitzem els suports necessaris per arribar-hi.</p>
+        <p>És també molt recomanable per a les persones que fan esport, ja que pot evitar lesions i millora el rendiment.</p>
+        <p>Per a veure més informació sobre la vida de B.K.S. Iyengar fes clic en les fotos.</p>
+      </div><!-- presentacio -->
+
+      <div class="pretenem">
+        <h4>Què pretenem</h4>
+        <p>Els “Centres de Ioga Iyengar® La Tribuna - El Pou de Llum” es proposen fer arribar el ioga a tothom per poder gaudir-ne dels seus beneficis físics, mentals i espirituals.</p>
+        <p>Aconseguir obrir el cos, a través de les postures -precises, intenses i dinàmiques-; per enfortir cames i braços, aportar flexibilitat a la columna vertebral, millorar la circulació de la sang i desenvolupar la coordinació i l’equilibri, així descarregar les tensions de la vida quotidiana, i portar salut i joia a totes les parts del cos.</p>
+        <p>Aprendre a respirar amb relaxament tot fent un treball intens per aconseguir equilibrar a la ment ajudant-la a calmar-se i asserenar-se arribant tal com definia Patañjali, al control de les seves fluctuacions.</p>
+        <p>I finalment equilibri de l'esperit aconseguint una pau interior per viure en harmonia amb nosaltres mateixos i amb el nostre entorn.</p>
+      </div><!-- pretenem -->
+
+      <!-- Duplico atributs x versions hover o no-hover -->
+      <div id="img-iyengar-1" class="img-iyengar-laptop">
+        <a href="https://aeyi.org/yoga-iyengar/el-maestro-bks-iyengar/" target="_blank">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Iyengar-1-sencer.jpg" alt="BKS Iyengar">
+          <h5 class="requadre">B.K.S. IYENGAR</h5>
+          <h6 class="pastilla">B.K.S. Iyengar</h6>
+        </a>
+      </div>
+
+      <div id="img-iyengar-2" class="img-iyengar-laptop">
+        <a href="https://aeyi.org/yoga-iyengar/el-maestro-bks-iyengar/" target="_blank">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/iyengar-2-sq.jpg" alt="BKS Iyengar">
+          <h5 class="requadre">B.K.S. IYENGAR</h5>
+          <h6 class="pastilla">B.K.S. Iyengar</h6>
+        </a>
+      </div>
+
+      <div id="img-iyengar-3">
+        <img src="img/ElPou-Virabadasana1.jpg" alt="BKS Iyengar">
+      </div>
+
+      <div id="img-iyengar-4">
+        <img src="img/Tribuna-Sarvangasana.jpg" alt="BKS Iyengar">
+      </div>
+
+      <div id="img-iyengar-mob-1" class="img-iyengar-mob">
+        <a href="https://aeyi.org/yoga-iyengar/el-maestro-bks-iyengar/" target="_blank">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/iyengar-2-sq.jpg" alt="BKS Iyengar">
+          <h6 class="pastilla">B.K.S. Iyengar</h6>
+        </a>
+      </div>
+
+      <div id="img-iyengar-mob-2" class="img-iyengar-mob">
+        <a href="https://aeyi.org/yoga-iyengar/el-maestro-bks-iyengar/" target="_blank">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Iyengar-1.jpg" alt="BKS Iyengar">
+          <h6 class="pastilla">B.K.S. Iyengar</h6>
+        </a>
+      </div>
+    </div><!-- grid-container -->
+  </section><!-- #iyengar -->
+
+
+
+  <!-- B2. Frase Parallax #####################-->
+  <div class="contingut-parallax parallax fons-b2">
+    <div class="auxiliar">
+      <div class="orla-parallax">
+        <div class="text-parallax">
+          <h4>El ioga serveix primordialment al creixement personal de l’individu, però a traves d’aquest creixement individual, la societat i la comunitat maduren.</h4>
+          <p>BKS Iyengar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- C. Section ELS CENTRES #################-->
+  <section id="centres" class="seccio">
+
+    <div class="contingut titol-seccio">
+      <h3>Els centres</h3>
+    </div>
+
+    <div class="reticula grid-centres">
+
+      <div id="historia" class="intro-centres">
+        <p>Som dos centres dedicats a l’ensenyament del Ioga Iyengar®, amb un personal professionalitzat preparat per fer aquesta tasca, que disposa d’unes condicions materials i d’organització adequades a les seves necessitats. Un tret d’identitat dels nostres centres és precisament el reconeixement de l’ “Asociación Española de Yoga Iyengar®” que vetlla pel nivell de qualitat de l’ensenyament dels seus professors.</p>
+      </div><!-- .intro-centres -->
+
+      <div class="historia">
+        <h4>Història</h4>
+        <p>Figueres va ser la primera ciutat d’Espanya a tenir un centre dedicat a l’ensenyament del Ioga Iyengar®, era el curs 1987/88: l’escola del professor Jordi Martí, actualment director i professor del “Centre de Ioga Iyengar® de Barcelona” al carrer Portal de l'Àngel. L’Enric Sala en va ser un dels primers alumnes.</p>
+        <p>Per raons totalment casuals, l’Enric, que ja havia impartit classes ocasionalment des de l’any 1993 a Figueres i Girona va començar a impartir classes a Olot; era el curs 1998/99.</p>
+        <p>A causa de l'increment d'alumnes, el local que compartia amb altres activitats es va fer insuficient i es va veure obligat a buscar un nou emplaçament. Així naixia el 12 de setembre de 2000, el “Centre de Ioga La Tribuna” a Olot.</p>
+        <p>L'1 de juny de 2002 el “Centre de Ioga la Tribuna” rep el seu reconeixement amb la presència de Jordi Martí que hi fa un curs intensiu.</p>
+      </div><!-- .historia -->
+
+      <div class="historia-2">
+        <p>L’octubre del curs 2004/05 s’inaugura en el mateix local una segona sala de pràctica i s’amplien els vestuaris.</p>
+        <p>A partir del dia 21 d’octubre de 2006, el Centre de Ioga la Tribuna és reconegut oficialment per la “Asociación Española de Yoga Iyengar®” com centre d’ensenyament del mètode Iyengar® passant a denominar-se "Centre de Ioga Iyengar® La Tribuna"</p>
+        <p>El temps passava i l’increment de les classes va fer que l’Enric fos tota la setmana a Olot, però la distància es feia feixuga: aquesta és la raó de l’inici d’una nova etapa i, amb aquesta, de l’obertura d’un nou centre de ioga a Figueres, el 23 de setembre de 2008, “Ioga, el Pou de Llum” que és reconegut oficialment com centre d’ensenyament del mètode Iyengar®. El 7 de gener de 2013, el Centre de Ioga Iyengar® El Pou de Llum, reinicia el curs en un nou emplaçament. L’Enric és director i professor d’ambdós centres.</p>
+        <p>Volem que els nostres alumnes tinguin totes les facilitats i estiguin còmodes per a aconseguir una bona pràctica. Per a això tenim aquestes característiques:</p>
+      </div><!-- .historia-2 -->
+
+      <div id="img-centres-1">
+        <img src="img/Tribuna-Sarvangasana.jpg" alt="BKS Iyengar">
+      </div>
+
+      <div id="img-centres-2">
+        <img src="img/Tribuna-ParivritaTrikonasana.jpg" alt="BKS Iyengar">
+      </div>
+
+      <div id="img-centres-3">
+        <img src="img/ElPou-Vasistasana.jpg" alt="BKS Iyengar">
+      </div>
+
+      <div id="img-centres-4">
+        <img src="img/Tribuna-ArdaXandrasana.jpg" alt="BKS Iyengar">
+      </div>
+
+      <div id="img-centres-5"><!-- x format mòbil -->
+        <img src="img/IMG_1127-H-500x333.jpg" alt="BKS Iyengar">
+      </div>
+
+    </div><!-- reticula grid-centres -->
+
+    <div id="pou" class="pou">
+      <h4 class="requadre h4-centres">CENTRE DE IOGA IYENGAR® EL POU DE LLUM - Figueres</h4>
+      <div class="grid-figueres">
+        <div class="caracter-figueres">
+          <h5>Característiques del Cente</h5>
+          <p>S’aprofiten unes sales d’un antic habitatge dels anys 30.<br>
+          S’hi entra per un pati enjardinat, amb una bassa amb peixos.<br>
+          Hi ha instaŀlada una rampa per facilitar-ne l’accés.<br>
+          Té 2 vestidors.<br>
+          Bany complet.<br>
+          Calefacció de pellets (ecològica i agradable).<br>
+          Parquet de fusta a tot el centre.<br>
+          L’espai de pràctica es composa de dues sales molt acollidores amb sostres i arrambadors amb motllures.<br>
+          El material de suport necessari per a la pràctica.</p>
+        </div><!-- .caracter-figueres -->
+        <div class="localit-figueres">
+          <h5>Localització</h5>
+          <p>Al casc antic de Figueres, a 50 metres darrera del Museu Dalí, l’adreça exacta és carrer Cap de Creus, 8.<br>
+          Aquest carrer és el que hi ha a la part baixa de l’aparcament d’El Garrigal, dona al carrer Canigó, just davant de les escales que van a la plaça Gala i Salvador Dalí.<br>
+          El carrer Cap de Creus, és per a vianants, hi ha molts patis i jardins que li donen un aire de tranquiŀlitat.<br>
+          Ens trobareu després de “La Tagliatella”, la “Botiga de sucs i gelats de fruita natural" i la “Creperie Bretonne”.<br>
+          Al Centre s’hi entra per un pati i la porta és ben bé la del costat de la Creperie.<br>
+          A més de l’aparcament d’El Garrigal, que és al costat, n’hi ha un altre a uns 100 metres, al carrer de La Jonquera.<br>
+          Telèfon de contacte: 619 197 512 (Enric) - 619 197 511 (Marc).<br>
+          E-mails: enric@iogaelpou.cat - marc@iogaelpou.cat<br>
+          <span>Important:</span> si quan telefoneu no us contestem, deixeu el vostre missatge o telèfon de contacte al contestador automàtic.</p>
+        </div><!-- .localit-figueres -->
+
+        <div id="mapa-figueres">
+          <img src="img/Mapa-Figueres.png">
+        </div>
+
+        <div id="img-figueres-1">
+          <img src="img/Pou-01-sq.jpg" alt="El Pou de Llum">
+        </div>
+        <div id="img-figueres-2">
+          <img src="img/Pou-02-sq.jpg" alt="El Pou de Llum">
+        </div>
+        <div id="img-figueres-3">
+          <img src="img/Pou-03-sq.jpg" alt="El Pou de Llum">
+        </div>
+      </div><!-- .grid-figueres -->
+    </div><!-- .pou -->
+
+    <div id="tribuna" class="tribuna">
+      <h4 class="requadre h4-centres">CENTRE DE IOGA IYENGAR® LA TRIBUNA - Olot</h4>
+      <div class="grid-olot">
+        <div class="caracter-olot">
+          <h5>Característiques del Cente</h5>
+          <p>Dues sales de pràctica.
+          Tres vestidors.
+          Bany complet.
+          Calefacció de gas i aire condicionat.
+          Parquet de fusta a les dues sales, passadissos i vestidors.
+          El material de suport necessari per a la pràctica.</p>
+          <h6>Sala Solei</h6>
+          <p>Àmplia i lluminosa sala de més de 50 m2.
+          Parets rectes i ben alineades.
+          Una espaiosa eixida que dona un agradable aire a la sala
+          Una característica d’aquesta sala és una bonica tribuna, la qual cosa dóna nom al centre.</p>
+          <h6>Sala Bac</h6>
+          <p>Àmplia i tranquil.la sala d’uns 30 m2.
+          Parets rectes i ben alineades.</p>
+        </div><!-- .caracter-olot -->
+        <div class="localit-olot">
+          <h5>Localització</h5>
+          <p>El local, fàcilment localitzable està situat davant la Teisa (estació d’autobusos), és a un edifici de color groguenc amb dues tribunes. A la planta baixa del edifici hi ha el “9 Centre d’ensenyament”, l’informatiu comercial “El 29” i la consulta del Dr. Cros.
+          L’adreça és Bisbe Lorenzana num.17 pral.
+          Telèfon de contacte: 619 197 512 (Enric) - 636 378 333 (Núria)
+          E-mails: enric@iogalatribuna.cat - nuria@iogalatribuna.cat
+          Important: si quan telefoneu no us contestem, deixeu el vostre missatge o telèfon de contacte al contestador automàtic. </p>
+        </div><!-- .localit-olot -->
+        <div id="mapa-olot">
+          <img src="img/Mapa-Olot.png">
+        </div>
+
+        <div id="img-olot-1">
+          <img src="img/Tribu-01-sq.jpg" alt="La Tribuna">
+        </div>
+        <div id="img-olot-2">
+          <img src="img/Tribu-02-sq.jpg" alt="La Tribuna">
+        </div>
+        <div id="img-olot-3">
+          <img src="img/Tribu-03-sq.jpg" alt="La Tribuna">
+        </div>
+      </div><!-- .grid-olot -->
+    </div><!-- tribuna -->
+
+  </section><!-- #centres -->
+
+
+
+  <!-- C2. Frase Parallax #####################-->
+
+  <div class="contingut-parallax parallax fons-b2">
+    <div class="auxiliar">
+      <div class="orla-parallax">
+        <div class="text-parallax">
+          <h4>En la pràctica cal estar divinament insatisfets, perquè aquesta insatisfacció és la que ens ajuda a millorar.</h4>
+          <p>BKS Iyengar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- D. Section EQUIP DOCENT ################-->
+  <section id="equip" class="seccio">
+
+    <div class="contingut titol-seccio">
+      <h3>Equip docent</h3>
+    </div>
+
+    <div class="reticula grid-equip">
+      <div id="enric" class="equip" onclick="openEquip1()">
+        <div class="equip-img">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Foto-Enric.png" alt="Enric Sala">
+          <h5 class="requadre">ENRIC SALA i SALIP <!--&plus;--></h5>
+          <h6 class="pastilla">ENRIC SALA</h6>
+        </div>
+      </div><!-- #enric -->
+
+      <div id="nuria" class="equip" onclick="openEquip2()">
+        <div class="equip-img">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Foto-Nuria.png" alt="Núria Castelló">
+          <h5 class="requadre">NÚRIA CASTELLÓ i COLOMER</h5>
+          <h6 class="pastilla">NÚRIA CASTELLÓ</h6>
+        </div>
+      </div><!-- #nuria -->
+
+      <div id="marc" class="equip" onclick="openEquip3()">
+        <div class="equip-img">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Foto-Marc.png" alt="Marc Sala">
+          <h5 class="requadre">MARC SALA i GOU</h5>
+          <h6 class="pastilla">MARC SALA</h6>
+        </div>
+      </div><!-- #marc -->
+
+      <div id="remei" class="equip" onclick="openEquip4()">
+        <div class="equip-img">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Foto-Remei.png" alt="Remei Gou">
+          <h5 class="requadre">REMEI GOU i FONT</h5>
+          <h6 class="pastilla">REMEI GOU</h6>
+        </div>
+      </div><!-- #remei -->
+
+      <div id="pere" class="equip" onclick="openEquip5()">
+        <div class="equip-img">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img src="img/Foto-Pere.jpg" alt="Pere">
+          <h5 class="requadre">PERE</h5>
+          <h6 class="pastilla">PERE</h6>
+        </div>
+      </div><!-- #pere -->
+
+      <div class="equip equip-logo">
+        <img src="img/Logo-LaTribuna-400x400.png" alt="Logotip">
+      </div>
+
+    </div><!-- .grid-equip -->
+
+  </section><!-- #equip -->
+
+  <!-- Modals Equip -->
+  <!-- Continguts modals SEMPRE fora del DIV que els crida, sinó no rutlla el botó de tancar-los -->
+
+  <section><!-- Modals Equip -->
+
+    <div id="enric-text" class="equip-text clearfix">
+      <span class="close cursor" onclick="closeEquip1()">&times;</span>
+      <h5 class="requadre">ENRIC SALA i SALIP</h5>
+      <img src="img/Foto-Enric.png" alt="Enric Sala">
+      <p>Nascut a Figueres el 04/02/48.<br>
+      Una vida vinculada a l’esport: 46 anys jugant a hoquei sobre patins, arribant a 1a divisió. El meu segon esport va ser l’atletisme aconseguint una marca provincial. També vaig practicar-ne d’altres.<br>
+      En la meva vida laboral hi cal destacar 12 anys de banca que vaig deixar essent-ne director i 21 anys com a copropietari de Viatges Figueres que vaig vendre per dedicar-me totalment a la pràctica i ensenyament de ioga Iyengar®, convertint la meva teràpia en l’eix de la meva vida.<br>
+      De molt jove vaig tenir greus problemes a l’esquena i la única solució era operar-me, sense cap garantia de quedar mínimament bé. Vaig tenir la sort de conèixer en Jordi Martí, professor de ioga i gràcies a ell, el 1987 vaig fer els meus primers passos en el ioga Iyengar. Va començar a canviar la meva esquena i la meva vida.<br>
+      El curs 93/94 en Jordi se n’anava a Índia i va fer un curs per poder-lo substituir, vaig donar dos mesos classes al seu centre. A partir d’aquí varen començar una sèrie de curtes substitucions a altres centres.<br>
+      Així va ser com el curs 98/99 vaig començar a Olot, substituint un company que no va poder tornar i el que era un favor a companys va passar a ser un canvi important, començant seriosament a impartir classes de ioga.<br>
+      El curs 2000-01 obro el “Centre de Ioga Iyengar® La Tribuna” a Olot i el 2008-09 el “Centre de Ioga Iyengar ® El Pou de Llum” a Figueres, actualment imparteixo classes al dos centres dels que en sóc el director.<br>
+      Com a practicant he assistit a nombrosos intensius i seminaris a càrrec de qualificats professors. Sóc membre fundador de l’”Asociación Española de Yoga Iyengar®” “AEYI” i participo regularment en les seves convencions.<br>
+      He fet la formació de professor de ioga Iyengar amb la primera promoció feta a Catalunya, dirigida per Jordi Martí, que va constar de 4 anys de preformació i dos de formació.<br>
+      Sóc professor certificat de ioga Iyengar® per el RIMYI, “Ramamani Iyengar Memorial Yoga Institute”, de Pune (Índia).<br> Independentment del ioga Iyengar, he fet cursos de sons harmònics que després del ioga és la meva passió, sóc professor diplomat en ioga Integral i també terapeuta en Pranic Healing (teràpia de les energies), nivell avançat.<br>
+      He fet diversos cursos a la Creu Roja de la Garrotxa, el 2010 un de 8 hores de durada de SVB+DEA acreditat pel Consell Català de Ressuscitació, el 2011 en faig un reciclatge de 2 hores de durada. El 2013 hi realitzo el Curs de Formació d’Atenció Sanitària Immediata, nivell 2 (socorrisme bàsic) d’una durada de 50 hores lectives.<br>
+      Com a professor he participat a diversos cursos d’especialització amb professors formadors com Faeq Biria, Patxi Lizardi, Jordi Martí, Xavier Alongina i Corine Biria. També he assistit a classes de Jordi Martí per a alumnes amb problemes especials.<br>
+      Poseeixo el certificat HABILITAT el 2011 i el CERTIFICAT DE PROFESSIONALITAT D’INSTRUCCIÓ EN IOGA de nivell de qualificació 3, expedit per la Generalitat de Catalunya i avalat per la Unió Europea a 15 de maig de 2014.<br>
+      A més de tots aquests anys compartint els meus coneixements amb els alumnes habituals, també he impartit, fora dels centres, cursos especials d'estiu (Ioga Vacances a Vilopriu anys 2008 a 11, Ioga Vacances a La Vajol 2017) i varies Màster Class, les últimes per a la celebració en l'àmbit provincial del "Dia Internacional de Ioga" organitzada al pavelló d'esports d'Olot els anys 2015 a 2017. </p>
+    </div>
+
+    <div id="nuria-text" class="equip-text clearfix">
+      <span class="close cursor" onclick="closeEquip2()">&times;</span>
+      <h5 class="requadre">NÚRIA CASTELLÓ i COLOMER</h5>
+      <img src="img/Foto-Nuria.png" alt="Núria Castelló">
+      <p>Vaig néixer a Jafre el 08/01/71, resideixo a La Vall de Bianya des de l'any 2001.<br>
+      De jove per una sèrie de problemes vaig agafar una depressió que em va portar a haver de prendre tres pastilles diàries durant uns 10 anys. L’any 2001 em vaig instal·lar a la Garrotxa. A finals de gener de l’any 2002, vaig haver d'estar de baixa per una altra crisi. Tenia tantes contractures que el metge em deia que tenia fibromiàlgia. Un dia una massatgista em va dir: "perquè no vas a fer ioga a la Tribuna, t'ho dic perquè tinc moltes clientes que hi van i estan contentes d'anar-hi, t'aniria molt bé”.<br>
+      Vaig trucar-hi per demanar informació. L'endemà ja anava a classe, inicialment dos dies per setmana a la tarda, per cert que en el relaxació final em quedava adormida, fins al cap de mitja hora o més no em despertava. Al cap de pocs dies vaig començar a anar-hi també al matí, així m'obligava aixecar-me del llit.<br>
+      Vaig començar a practicar el febrer de 2002, el mes de desembre el metge em va baixar la dosis del medicament i a partir del febrer del 2003 ja no en vaig prendre més.<br>
+      Recordo que em descrivien com una persona amb els ulls caiguts i tristos i la cara de color de cendra. Les companyes de classe em deien: La bella dorment que no riu mai.<br>
+      Des de llavors practico intensament el ioga Iyengar® sota la tutela d’Enric Sala. He rebut ensenyaments de Sílvia Ros, amb la que he fet intensius de ioga per a dones i he assistit a cursos intensius a càrrec de Jordi Martí de Barcelona, Modest Martínez de Sabadell, Josep M. Pàmies de Tarragona, Faeg Biria i Corine Biria de París i l’Enric Sala, del que també ha rebut una intensa formació docent.<br>
+      Sóc membre de "l’Asociación Española de Yoga Iyengar® (AEYI)" i participo regularment en les seves convencions.<br>
+      A més de les classes que imparteixo al "Centre de Ioga Iyengar® La Tribuna", des del curs 2002/03 també n'imparteixo al Casal de la Gent Gran de la Canya i des del curs 2005/06 a Sant Pau de Segúries.<br>
+      El curs 2007-2008 vaig fer la preformació de professora de ioga Iyengar® i els dos cursos següents la formació amb la tercera promoció de Catalunya, dirigida per Jordi Martí.<br>
+      Des del 16 d’octubre del 2010 sóc professora certificada de Ioga Iyengar® per el RIMYI, "Ramamani Iyengar Memorial Yoga Institute", de Pune (Índia).<br>
+      Sóc diplomada de ioga Integral des de l'any 2005. I també vaig obtenir el títol avançat de Pranic Healing (Teràpia de les Energies).<br>
+      A la Creu Roja de la Garrotxa, l’any 2010 he realitzat un curs de 8 hores de durada de SVB+DEA acreditat pel Consell Català de Ressuscitació. L’any 2011 faig un reciclatge d’aquest curs de 2 hores de durada. L’any 2013 he realitzat el Curs de Formació d’Atenció Sanitària Immediata, nivell 2 (socorrisme bàsic) amb una durada de 50 hores lectives.<br>
+      La meva qualificació com a professora de ioga ha estat reconeguda per la Generalitat de Catalunya amb els certificats HABILITAT el 2011 i amb l’ACREDITAT el 2014.<br>
+      A més de tots aquests anys compartint els meus coneixements amb els alumnes habituals, també he impartit cursos especials per a les dones i ,fora del centre, cursos especials d’estiu.</p>
+    </div><!-- #nuria-text -->
+
+    <div id="marc-text" class="equip-text clearfix">
+      <span class="close cursor" onclick="closeEquip3()">&times;</span>
+      <h5 class="requadre">MARC SALA i GOU</h5>
+      <img src="img/Foto-Marc.png" alt="Marc Sala">
+      <p>Figueres, 11/07/1974<br>Llicenciat en Geografia a la Universitat de Girona. Artísticament, format a l’Aula Municipal de Teatre de Figueres i a l’Estudi Nancy Tuñón de Barcelona. Completa la seva formació amb estudis de dansa contemporània a l’Espiral de Girona, amb cursos de tècniques de Clown, Tècnica Alexander, esgrima teatral i d’instrument amb el saxo.<br>
+      L’any 2006 inicia una croada per millorar la societat en què vivim amb la fundació de la companyia La Bèstia Peluda.<br>
+      Comença a practicar Ioga Iyengar a "Espai Vital" de Figueres amb en Jordi Martí el curs 1988/89. Aquest inici ve promogut per la pràctica dels seus pares, l’Enric i la Remei, que l’animen a provar-ho. En Marc, en queda molt satisfet, i més quan una lesió mal curada al genoll, que de tant en tant li provoca molèsties, es resol del tot.<br>
+      Des d’aleshores, practica Ioga Iyengar amb assiduïtat, tot i que, passa èpoques de crisi on impera la irregularitat. Una d’aquestes èpoques és quan marxa a estudiar a Girona. Tot i això, practica en un pis molt cèntric al costat del Centre Cultural “la Mercè” de Girona amb en Jordi Esteban del centre “Aditya”.<br>
+      En tornar a Figueres, practica amb el seu pare l’Enric, que en aquells moments s’està preparant per ser professor titulat, i més endavant també amb la Núria Ros al centre “Espai Vital”.<br>
+      El Ioga Iyengar cada cop més entra a formar part de la seva vida, i una bona sorpresa li arriba quan l’Enric, el seu pare, que dirigeix dos centres de Ioga Iyengar a Olot i Figueres (“La Tribuna” i “El pou de llum”, respectivament), li proposa donar classes per tal d’ajudar-lo. La resposta és afirmativa per part d’en Marc i això serveix d’estímul per créixer i evolucionar.<br>
+      Des del gener del 2009 que està donant classes, el següent pas serà, indubtablement, fer la formació per ser professor titulat de Ioga en el mètode Iyengar. De moment, ja ha fet un curs de Pranic Healing (Teràpia de les Energies) i s’ha tret el títol de professor diplomat en Ioga Integral. La Generalitat de Catalunya reconeix els seus coneixements com a professor amb l’HABILITAT el 2011.</p>
+    </div><!-- #marc-text -->
+
+    <div id="remei-text" class="equip-text clearfix">
+      <span class="close cursor" onclick="closeEquip4()">&times;</span>
+      <h5 class="requadre">REMEI GOU i FONT</h5>
+      <img src="img/Foto-Remei.png" alt="Remei Gou">
+      <p> Nascuda a Figueres el 4-12-1950<br>
+      Mestre d’Educació Infantil de la Generalitat de Catalunya, mestre de Català, actualment jubilada.<br>
+      Va guanyar el segon premi d’ Experiències Pedagògiques Alt Empordà de l’Ajuntament de Figueres, juntament amb altres companyes presentant al concurs, un recull de llibres per a treballar la lectura al parvulari.<br>
+      Va ser coautora del treball “Educació per a la salut a l’escola” a Preescolar, publicat pel CRP de l’Alt Empordà amb la col·laboració de l’Ajuntament de Figueres.<br>
+      És autora de diversos contes. Dos d’ells, “Els tres reis despistats” i “Història d’una disfressa” teatralitzats per la companyia “La Bestia Peluda” s’han representat per diferents escenaris de les nostres contrades.<br>
+      Té també estudis de piano, guitarra, flauta dolça, solfeig i harmonia.<br>  Practica ioga Iyengar des del 1988. Ha tingut com a professors a Jordi Martí, Sílvia Ros, Núria Ros, Núria Castelló i Enric Sala, entre altres.<br>
+      És sòcia des del seu inici de l’A.E.Y.I. - Asociación Española de Yoga Iyengar. Ha assistit a nombroses convencions de l’A.E.Y.I. amb les seves corresponents classes dirigides per professors de reconegut nivell professional.<br>
+      Professora diplomada en ioga Integral. Ha fet cursos de Sons harmònics, Massatge Tailandès, Prànic Healing (Teràpia de les Energies).<br>
+      Col·labora, sense impartir classe, en els dos centres amb la seva experiència tan pedagògica com iòguica.</p>
+    </div><!-- #remei-text -->
+
+    <div id="pere-text" class="equip-text clearfix">
+      <span class="close cursor" onclick="closeEquip5()">&times;</span>
+      <h5 class="requadre">PERE</h5>
+      <img src="img/Foto-Pere.jpg" alt="Pere">
+      <p> Nascuda a Figueres el 4-12-1950<br> Mestre d’Educació Infantil de la Generalitat de Catalunya, mestre de Català, actualment jubilada.<br>        Va guanyar el segon premi d’ Experiències Pedagògiques Alt Empordà de l’Ajuntament de Figueres, juntament amb altres companyes presentant al concurs, un recull de llibres per a treballar la lectura al parvulari.<br>
+      Va ser coautora del treball “Educació per a la salut a l’escola” a Preescolar, publicat pel CRP de l’Alt Empordà amb la col·laboració de l’Ajuntament de Figueres.<br>
+      És autora de diversos contes. Dos d’ells, “Els tres reis despistats” i “Història d’una disfressa” teatralitzats per la companyia “La Bestia Peluda” s’han representat per diferents escenaris de les nostres contrades.<br>
+      Té també estudis de piano, guitarra, flauta dolça, solfeig i harmonia.<br>  Practica ioga Iyengar des del 1988. Ha tingut com a professors a Jordi Martí, Sílvia Ros, Núria Ros, Núria Castelló i Enric Sala, entre altres.<br>
+      És sòcia des del seu inici de l’A.E.Y.I. - Asociación Española de Yoga Iyengar. Ha assistit a nombroses convencions de l’A.E.Y.I. amb les seves corresponents classes dirigides per professors de reconegut nivell professional.<br>
+      Professora diplomada en ioga Integral. Ha fet cursos de Sons harmònics, Massatge Tailandès, Prànic Healing (Teràpia de les Energies).<br>
+      Col·labora, sense impartir classe, en els dos centres amb la seva experiència tan pedagògica com iòguica.</p>
+    </div><!-- #pere-text -->
+
+  </section><!-- Modals Equip -->
+
+
+
+  <!-- D2. Frase Parallax #####################-->
+
+  <div class="contingut-parallax parallax fons-d2">
+    <div class="auxiliar">
+      <div class="orla-parallax">
+        <div class="text-parallax">
+          <h4>Els coneixements es poden adquirir però la saviesa cal guanyar-la.</h4>
+          <p>B.K.S. Iyengar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- E. Section INFORMACIÓ ################-->
+  <section id="info" class="seccio">
+
+    <div class="contingut titol-seccio">
+      <h3>Informació</h3>
+    </div>
+
+    <div id="calendari" class="reticula apartats-info grid-calendari">
+      <div class="text-calendari">
+        <h4>Calendari curs 2018/19</h4>
+
+        <div>
+          <p>El curs comença el 12 de setembre i finalitza el 14 d’agost.</p>
+          <h5>CALENDARI de festius</h5>
+          <ul class="llista">
+            <li>Dijous 1 de novembre - Tots Sants.</li>
+            <li>Dijous 6 de desembre - La Constitució.</li>
+            <li>Del dilluns 24 de desembre al dijous 3 de gener - Nadal.</li>
+            <li>Del dilluns 15 d'abril al dilluns 22 d'abril - Setmana Santa.</li>
+            <li>Dimecres 1 de maig - Festa del treball.</li>
+            <li>Dijous 2 de maig - Pont a Figueres per Santa Creu.</li>
+            <li>Dilluns 24 de juny - Sant Joan.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="imatge-calendari">
+        <img src="img/ElPou-Virabadasana1.jpg" alt="BKS Iyengar">
+      </div>
+    </div>
+
+    <div id="img-info-1" class="img-info">
+      <img src="img/IMG-53AFE8B9-H-500x333.jpg" alt="Logotip">
+    </div>
+
+    <div id="horaris" class="reticula apartats-info">
+      <div>
+        <h4>Horaris pel curs 2018/19</h4>
+      </div>
+
+      <div class="grid-horari">
+        <div id="horari-figueres" class="horari-centres">
+          <h5 class="requadre">Centre de Ioga Iyengar EL POU DE LLUM - Figueres</h5>
+          <div class="grid-2horaris">
+            <div><h6>Nivell</h6></div>
+            <div><h6>Dilluns</h6></div>
+            <div><h6>Dimarts</h6></div>
+            <div><h6>Dimecres</h6></div>
+            <div><h6>Dijous</h6></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 07.15<br>a 08.30</p></div>
+            <div><p></p></div>
+            <div><p>de 07.15<br>a 08.30</p></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 09.30<br>a 11.00</p></div>
+            <div><p></p></div>
+            <div><p>de 09.30<br>a 11.00</p></div>
+            <div><p>Obert</p></div>
+            <div><p>de 13.20<br>a 14.45</p></div>
+            <div><p></p></div>
+            <div><p>de 13.20<br>a 14.45</p></div>
+            <div><p></p></div>
+            <div><p>Mainada de 6 a 11 any</p></div>
+            <div><p>de 17:15<br>a 18:15</p></div>
+            <div><p></p></div>
+            <div><p></p></div>
+            <div><p></p></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 17.30<br>a 19.00</p></div>
+            <div><p></p></div>
+            <div><p>de 17.30<br>a 19.00</p></div>
+            <div><p>Obert</p></div>
+            <div><p>de 18.30<br>a 20.00</p></div>
+            <div><p></p></div>
+            <div><p>de 18.30<br>a 20.00</p></div>
+            <div><p></p></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 19.30<br>a 21.00</p></div>
+            <div><p></p></div>
+            <div><p>de 19.30<br>a 21.00</p></div>
+          </div><!-- .grid-2horaris -->
+          <div class="info-horari">
+            <p>Es pot assistir també a les classes del “Centre de Ioga Iyengar® La Tribuna” d’Olot.</p>
+            <p><span>ATENCIÓ!</span>
+            <br>Aquests horaris són susceptibles de variació. Els possibles canvis (retocs, anul·lacions...) els trobaràs al tauler d'anuncis del centre.</p>
+            <p><span>CORREU ELECTRÒNIC</span>
+            <br>Feu-nos arribar el vostre correu electrònic a fi d’agilitar les comunicacions.</p>
+            <p><span>COMUNICACIONS AMB EL CENTRE</span>
+            <br>Enric: telèfon 619 197 512 correu: enric@iogaelpou.cat
+            <br>Marc: telèfon 619 197 511 correu: marc@iogaelpou.cat</p>
+            <p>Segueix-nos al nostre facebook.</p>
+          </div>
+        </div><!-- #horari-figueres -->
+
+        <div id="horari-olot" class="horari-centres">
+          <h5 class="requadre">Centre de Ioga Iyengar LA TRIBUNA - Olot</h5>
+          <div class="grid-2horaris">
+            <div><h6>Nivell</h6></div>
+            <div><h6>Dilluns</h6></div>
+            <div><h6>Dimarts</h6></div>
+            <div><h6>Dimecres</h6></div>
+            <div><h6>Dijous</h6></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 09.15<br>a 10.45</p></div>
+            <div><p></p></div>
+            <div><p>de 09.15<br>a 10.45</p></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 15.15<br>a 16.45</p></div>
+            <div><p></p></div>
+            <div><p>de 15.15<br>a 16.45</p></div>
+            <div><p>Mainada de 6 a 11 any</p></div>
+            <div><p></p></div>
+            <div><p></p></div>
+            <div><p>de 17:15<br>a 18:15</p></div>
+            <div><p></p></div>
+            <div><p>Obert</p></div>
+            <div><p>de 17.30<br>a 19.00</p></div>
+            <div><p></p></div>
+            <div><p>de 17.30<br>a 19.00</p></div>
+            <div><p></p></div>
+            <div><p>Obert</p></div>
+            <div><p></p></div>
+            <div><p>de 18.30<br>a 20.00</p></div>
+            <div><p></p></div>
+            <div><p>de 18.30<br>a 20.00</p></div>
+            <div><p>Obert</p></div>
+            <div><p>de 19.30<br>a 21.00</p></div>
+            <div><p></p></div>
+            <div><p>de 19.30<br>a 21.00</p></div>
+            <div><p></p></div>
+          </div><!-- .grid-2horaris -->
+          <div class="info-horari">
+            <p>Es pot assistir també a les classes de “Ioga, El Pou de Llum” de Figueres</p>
+            <p><span>ATENCIÓ!</span>
+            <br>Aquests horaris són susceptibles de variació. Els possibles canvis (retocs, anul·lacions...) els trobaràs al tauler d'anuncis del centre.</p>
+            <p><span>CORREU ELECTRÒNIC</span>
+            <br>Feu-nos arribar el vostre correu electrònic a fi d’agilitar les comunicacions.</p>
+            <p><span>COMUNICACIONS AMB EL CENTRE</span>
+            <br>Enric: telèfon 619 197 512 correu: enric@iogaelpou.cat
+            <br>Núria: telèfon 636 378 333 correu: nuria@iogalatribuna.cat</p>
+            <p>Segueix-nos al nostre facebook.</p>
+          </div>
+        </div><!-- #horari-olot -->
+
+      </div><!-- .grid-horari -->
+
+    </div><!-- #horari -->
+
+    <div id="img-info-2" class="img-info">
+      <img src="img/IMG-96007E97-H-500x333.jpg" alt="Logotip">
+    </div>
+
+    <div id="tarifes" class="reticula apartats-info">
+      <h4>Tarifes curs 2018/19</h4>
+      <p>(Totes les quotes amb 21% d'IVA inclòs)</p>
+      <div class="grid-tarifes">
+
+        <div class="matricula tipus-tarifes">
+          <h5 class="requadre">Matrícula</h5>
+          <p>Dret d’assistència a les classes dels Centres: 50€</p>
+          <p>Donant-se de baixa o deixant de pagar alguna quota es perdran els drets de matrícula.</p>
+        </div><!-- .matricula -->
+
+        <div class="tarifa-plana tipus-tarifes">
+          <h5 class="requadre">Tarifa plana</h5>
+          <p>Les Tarifes planes consisteixen en l’assistència a 2 classes a la setmana que hauràs triat i en l’assistència a altres classes sempre i quan avisis amb antelació i l’espai de la sala ho permeti.</p>
+
+          <h6>TARIFA PLANA MENSUAL</h6>
+          <ul class="llista">
+            <li>Rebut mensual d'octubre a juliol: 56,00 €</li>
+            <li>Setembre i agost: 34,00 €</li>
+          </ul>
+
+          <h6>TARIFA PLANA ECONÒMICA</h6>
+          <ul class="llista">
+            <li>Assistència a tot el curs, es cobrarà el rebut a mitjans de setembre: 543,00 €</li>
+            <li>Assistència de setembre a desembre, es cobrarà el rebut a mitjans de setembre: 185,00 €</li>
+            <li>Assistència de gener a abril, es cobrarà el rebut a primers de gener: 208,00 €</li>
+            <li>Assistència de maig a agost, es cobrarà el rebut a primers de maig: 185,00 €</li>
+            <li class="majuscula">Atenció! No és reemborsable.</li>
+          </ul>
+        </div><!-- .tarifa-plana -->
+
+        <div class="tarifa-undia tipus-tarifes">
+          <h5 class="requadre">Tarifa 1 dia a la setmana</h5>
+          <p>Assistència a 1 classe a la setmana, que cal triar prèviament.</p>
+
+          <h6>TARIFA 1 DIA A LA SETMANA - MENSUAL</h6>
+          <ul class="llista">
+            <li>Rebut mensual d'octubre a juliol: 45,00 €</li>
+            <li>Setembre i agost: 28,00 €</li>
+          </ul>
+
+          <h6>TARIFA 1 DIA A LA SETMANA - ECONÒMICA</h6>
+          <ul class="llista">
+            <li>Assistència a tot el curs, es cobrarà el rebut a mitjans de setembre: 438,00 €</li>
+            <li>Assistència de setembre a desembre, es cobrarà el rebut a mitjans de setembre: 150,00 €</li>
+            <li>Assistència de gener a abril, es cobrarà el rebut a primers de gener: 167,00 €</li>
+            <li>Assistència de maig a agost, es cobrarà el rebut a primers de maig: 150,00 €</li>
+            <li class="majuscula">Atenció! No és reemborsable.</li>
+          </ul>
+        </div><!-- .tarifa-undia -->
+
+        <div class="manteniment tipus-tarifes">
+          <h5 class="requadre">Quota de manteniment</h5>
+          <p>Quota mensual en cas d’inassistència: 17€</p>
+          <p>Si t'interessa cal demanar-la.</p>
+        </div><!-- .manteniment -->
+
+        <div class="familiar tipus-tarifes">
+          <h5 class="requadre">Descompte familiar</h5>
+          <p>Descompte a cada membre d'una mateixa família en el rebut mensual: 5€</p>
+          <p>No s’aplicarà en la quota de manteniment ni en les tarifes econòmiques.</p>
+        </div><!-- .familiar -->
+
+        <div class="una-classe tipus-tarifes">
+          <h5 class="requadre">Quota d'una classe</h5>
+          <p>Per assistir a una sola classe: 20€</p>
+          <p>No cal estar matriculat al centre????</p>
+        </div><!-- .una-classe -->
+
+        <div class="mainada tipus-tarifes">
+          <h5 class="requadre">Tarifa mainada de 6 a 11 anys</h5>
+          <p>Matrícula en fer la inscripció inicial: 45€</p>
+          <p>Rebut setembre: 25€</p>
+          <p>Rebut mensual d'octubre a juny: 30€</p>
+          <p>Els mesos de juliol i agost no hi ha classes</p>
+        </div><!-- .mainada -->
+
+        <div class="pagaments tipus-tarifes">
+          <h5 class="requadre">Pagaments</h5>
+          <p>El pagament s’efectuarà per domiciliació bancària, amb excepció de les Tarifes Econòmiques que es poden pagar en efectiu.</p>
+          <p>La falta d’assistència a classe no eximeix el deure de pagar la quota.</p>
+        </div><!-- .pagaments -->
+
+        <div id="molt-important" class="tipus-tarifes">
+          <h5 class="requadre majuscula">Molt important</h5>
+          <p>Cal avisar, abans del dia 25 del mes anterior al pagament, per:</p>
+          <ul class="llista">
+            <li>Canvi del tipus de quota.</li>
+            <li>Modificació de la domiciliació bancària.</li>
+            <li>Baixa del Centre.</li>
+          </ul>
+        </div><!-- .molt-important -->
+
+        <div id="img-tarifes-1" class="img-tarifes">
+          <img src="img/Tribuna-Padmasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-tarifes-2" class="img-tarifes">
+          <img src="img/ElPou-Salabasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-tarifes-3" class="img-tarifes">
+          <img src="img/Tribuna-ParivritaTrikonasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-tarifes-4" class="img-tarifes">
+          <img src="img/Tribuna-Padmasana.jpg" alt="Logotip">
+        </div>
+
+      </div><!-- .grid-tarifes -->
+
+    </div><!-- #tarifes -->
+
+    <div id="img-info-3" class="img-info">
+      <img src="img/IMG_1124-H-500x333.jpg" alt="Logotip">
+    </div>
+
+    <div id="consells" class="reticula apartats-info">
+      <h4>Consells pràctics</h4>
+
+      <div class="grid-consells">
+
+        <div class="text-consells-1">
+
+          <div id="comunicacions" class="consells-practics">
+            <h5>Comunicacions:</h5>
+            <ul class="llista">
+              <li>Et preguem que el que ens hagis de comunicar ho facis per correu electrònic. Així evitem incidències. El WhatsApp i el correu del Facebook no són pràctics per guardar. El que ens dius de paraula és fàcil d’oblidar.</li>
+            </ul>
+          </div><!-- #comunicacions -->
+
+          <div id="les-classes" class="consells-practics">
+            <h5>Les classes:</h5>
+            <ul class="llista">
+              <li>Els horaris són susceptibles de variació. Els possibles canvis (retocs, anul·lacions...) els trobaràs al web del centre.</li>
+              <li>La programació del curs està pensada per assistir a classe dos dies a la setmana.</li>
+              <li>Assisteix regularment a classe. D’aquesta manera afavoriràs el ritme i l’energia de la classe i, per tant, la millora individual de cadascú.</li>
+              <li>Sigues puntual per poder preparar el cos i la serenor de la ment.</li>
+              <li>La classe comença amb la salutació a Patanjali o el silenci inicial. Et preguem que estiguis a la sala en aquest moment. Si malgrat tot, algun dia arribes tard, espera a entrar a la sala quan la salutació hagi acabat.</li>
+              <li>En acabar la classe, endreça el material de pràctica (cinturons, mantes...) amb la mateixa cura que els has fet servir.</li>
+              <li>Has d’avisar sempre que no puguis assistir a classe, així algú altre podrà ocupar la teva plaça.</li>
+            </ul>
+          </div><!-- #les-classes -->
+        </div><!-- .text-consells-1 -->
+
+        <div class="text-consells-2">
+
+          <div id="respecte" class="consells-practics">
+            <h5>Per respecte als altres:</h5>
+            <ul class="llista">
+              <li>Desconnecta el mòbil quan entris al Centre.</li>
+              <li>Sigues puntual.</li>
+              <li>Parla en veu baixa o resta en silenci en els corredors, els vestidors i per descomptat a la sala de pràctica.</li>
+            </ul>
+          </div><!-- #respecte -->
+
+          <div id="higieniques" class="consells-practics">
+            <h5>Mesures higièniques:</h5>
+            <ul class="llista">
+              <li>Camina descalç per l’interior del Centre. Deixa el calçat al moble de l’entrada.</li>
+              <li>Aconsellem rentar-se els peus abans de la pràctica. (Porta tovallola).</li>
+              <li>No passis a la sala amb els mitjons que portes pel carrer. Si vols utilitzar mitjons en el relaxament final, que siguin exclusivament per aquesta utilitat.</li>
+              <li>El Centre et proporciona tot el material, malgrat això t’aconsellem que utilitzis el teu propi tapís marcat amb el teu nom.</li>
+            </ul>
+          </div><!-- #higieniques -->
+        </div><!-- .text-consells-2 -->
+
+        <div id="practica" class="consells-practics">
+          <h5>La pràctica:</h5>
+          <ul class="llista">
+            <li>És convenient no haver menjat res dues hores abans de la classe, com a mínim. No es pot beure aigua durant la classe.</li>
+            <li>Evacua els intestins i la bufeta abans de començar. Si a mitja classe te’n venen ganes, no dubtis mai d’anar al lavabo.</li>
+            <li>Durant el període menstrual cal evitar certes postures i seguir una seqüència especialment beneficiosa. Comunica-ho al professor abans de començar la classe.</li>
+            <li>És molt important que informis el professor, abans de començar la classe, de qualsevol dolor o molèstia.</li>
+            <li>Si t’han fet qualsevol tipus de manipulació o acupuntura hauràs d’estar un o dos dies sense practicar. Consulta al terapeuta.</li>
+            <li>Quan a la roba de pràctica t’aconsellem que sigui de cotó i còmoda, que et permeti fer tots els moviments. Una samarreta i uns pantalons curts són la roba ideal.</li>
+            <li>S’aconsella practicar sense rellotge ni joies.</li>
+            <li>A l’estiu per poder practicar pren el sol amb mesura. El sol i el ioga son incompatibles.</li>
+            <li>T’encoratgem vivament a practicar a casa. Amb aquesta finalitat, et donarem totes les orientacions necessàries.</li>
+          </ul>
+        </div><!-- #practica -->
+
+        <div id="vestidors" class="consells-practics">
+          <h5>Vestidors:</h5>
+          <ul class="llista">
+            <li>Quan marxis del Centre, no hi deixis res.</li>
+            <li>No ens podem fer càrrec, en cap cas, de res que deixeu al vestidor.</li>
+            <li>Tot el que quedi als vestidors ho retirarem periòdicament i no es guardarà d’un curs per l’altre.</li>
+            <li>Els tapissos abandonats a final de curs quedaran a disposició del Centre.</li>
+          </ul>
+        </div><!-- #vestidors -->
+
+        <div id="img-consells-1" class="img-consells">
+          <img src="img/Tribuna-Padmasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-consells-2" class="img-consells">
+          <img src="img/ElPou-Salabasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-consells-3" class="img-consells">
+          <img src="img/Tribuna-ParivritaTrikonasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-consells-4" class="img-consells">
+          <img src="img/ElPou-Salabasana.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-consells-5">
+          <img src="img/Tribuna-Namaskar retall.jpg" alt="Logotip">
+        </div>
+      </div><!-- .grid-consells -->
+    </div><!-- #consells -->
+
+    <div id="img-info-4" class="img-info">
+      <img src="img/IMG_1037-H-500x333.jpg" alt="Logotip">
+    </div>
+
+    <div id="material" class="reticula apartats-info">
+      <h4>Material</h4>
+
+      <div class="grid-material">
+
+        <div id="bolster" class="materials">
+          <h5 class="requadre">Bolster</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Bolster.png" alt="Bolster">
+            </div>
+            <div class="material-text">
+              <p>Coixí de 80 x 25 amb folre de cotó i farcit de llana, funda de cotó. Colors diversos. Article de "MON, llanes i coixins" Fet a mà i amb el cor, respectant la naturalesa i utilitzant matèries de primera qualitat.</p>
+              <p>Preu 40 €</p>
+            </div>
+          </div>
+        </div><!-- #bolster -->
+
+        <div id="cinturo-curt" class="materials">
+          <h5 class="requadre">Cinturó TPL de 2 mts.</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Cinturo-curt.png" alt="Cinturó TPL de 2 mts.">
+            </div>
+            <div class="material-text">
+              <p>Cinturó de cotó de 2 mts. amb sivella corredora.</p>
+              <p>Preu 8.5 €</p>
+            </div>
+          </div>
+        </div><!-- #cinturo-curt -->
+
+        <div id="cinturo-llarg" class="materials">
+          <h5 class="requadre">Cinturó TPL de 2,50 mts.</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Cinturo-llarg.png" alt="Cinturó TPL de 2,50 mts.">
+            </div>
+            <div class="material-text">
+              <p>Cinturó de cotó de 2,50 mts. amb sivella corredora.</p>
+              <p>Preu 9 €</p>
+            </div>
+          </div>
+        </div><!-- #cinturo-llarg -->
+
+        <div id="ferro" class="materials">
+          <h5 class="requadre">Ferro per cordes TPL</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Ferro-cordes.png" alt="Ferro per cordes TPL">
+            </div>
+            <div class="material-text">
+              <p>Ferro per enganxar a la paret. Utilitzat per penjar-hi les cordes de ioga kurunta.</p>
+              <p>Preu 10 €</p>
+            </div>
+          </div>
+        </div><!-- #ferro -->
+
+        <div id="manta" class="materials">
+          <h5 class="requadre">Manta bàsica de ioga</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Manta.png" alt="Manta bàsica de ioga">
+            </div>
+            <div class="material-text">
+              <p>Composta de llana regenerada i acrílic de cotó. Pesa al voltant d'1kg i és pot rentar a màquina. Mesures: 140 x 200 cm</p>
+              <p>Preu 11 €</p>
+            </div>
+          </div>
+        </div><!-- #manta -->
+
+        <div id="tapis-prim-molt-curt" class="materials">
+          <h5 class="requadre">Tapís gruix 2,9 a/molt curt</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Tapis-antilliscant.png" alt="Tapís 2,9 gruix a/molt curt">
+            </div>
+            <div class="material-text">
+              <p>TAPÍS ANTILLISCANT SPEZIAL.<br>
+              Mesures: 1,71 de llargada x 60 cm d’amplada i 2,9 mm de gruix. Molt bona adherència i comoditat en el seu trasllat. La "mare de totes les estores". Molt bona relació qualitat/preu. Aquest tapís antilliscant té una superfície estable i excel·lents qualitats d’amortiment, essent flexible i suau al tacte. Durarà molts anys en un estat excel·lent. Tots els materials emprats en la seva fabricació són totalment segurs i no causen al·lèrgies. Certificació ecològica Oeko-Tex Standard 100 Classe 1. Rentada: a mà o a màquina no superar els 40° graus, no admet assecadora.</p>
+              <p>Preu 24 €</p>
+            </div>
+          </div>
+        </div><!-- #tapis-prim-molt-curt -->
+
+        <div id="tapis-prim-curt" class="materials">
+          <h5 class="requadre">Tapís gruix 2,9 b/curt</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Tapis-antilliscant.png" alt="Tapís gruix 2,9 b/curt">
+            </div>
+            <div class="material-text">
+              <p>TAPÍS ANTILLISCANT SPEZIAL.<br>
+              Mesures: 1,75 de llargada x 60 cm d’amplada i 2,9 mm de gruix. Molt bona adherència i comoditat en el seu trasllat. La "mare de totes les estores". Molt bona relació qualitat/preu. Aquest tapís antilliscant té una superfície estable i excel·lents qualitats d’amortiment, essent flexible i suau al tacte. Durarà molts anys en un estat excel·lent. Tots els materials emprats en la seva fabricació són totalment segurs i no causen al·lèrgies. Certificació ecològica Oeko-Tex Standard 100 Classe 1. Rentada: a mà o a màquina no superar els 40° graus, no admet assecadora.</p>
+              <p>Preu 25 €</p>
+            </div>
+          </div>
+        </div><!-- #tapis-prim-curt -->
+
+        <div id="tapis-prim-normal" class="materials">
+          <h5 class="requadre">Tapís gruix 2,9 c/normal</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Tapis-antilliscant.png" alt="Tapís gruix 2,9 c/normal">
+            </div>
+            <div class="material-text">
+              <p>TAPÍS ANTILLISCANT SPEZIAL.<br>
+              Mesures: 1,95 de llargada x 60 cm d’amplada i 2,9 mm de gruix. Molt bona adherència i comoditat en el seu trasllat. La "mare de totes les estores". Molt bona relació qualitat/preu. Aquest tapís antilliscant té una superfície estable i excel·lents qualitats d’amortiment, essent flexible i suau al tacte. Durarà molts anys en un estat excel·lent. Tots els materials emprats en la seva fabricació són totalment segurs i no causen al·lèrgies. Certificació ecològica Oeko-Tex Standard 100 Classe 1. Rentada: a mà o a màquina no superar els 40° graus, no admet assecadora.</p>
+              <p>Preu 27 €</p>
+            </div>
+          </div>
+        </div><!-- #tapis-prim-normal -->
+
+        <div id="tapis-gruixut-curt" class="materials">
+          <h5 class="requadre">Tapís gruix 4,5 a/curt</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Tapis-antilliscant.png" alt="Tapís gruix 4,5 a/curt">
+            </div>
+            <div class="material-text">
+              <p>TAPIS ANTILLISCANT SPEZIAL.<br>
+              Mesures: 1,75 de llargada x 60 cm d’amplada i 4,5 mm de gruix. Molt bona adherència i comoditat en el seu trasllat. La "mare de totes les estores". Molt bona relació qualitat/preu. Aquest tapís antilliscant té una superfície estable i excel·lents qualitats d’amortiment, essent flexible i suau al tacte. Durarà molts anys en un estat excel·lent. Tots els materials emprats en la seva fabricació són totalment segurs i no causen al·lèrgies. Certificació ecològica Oeko-Tex Standard 100 Classe 1. Rentada: a mà o a màquina no superar els 40° graus, no admet assecadora.</p>
+              <p>Preu 29 €</p>
+            </div>
+          </div>
+        </div><!-- #tapis-gruixut-curt -->
+
+        <div id="tapis-gruixut-normal" class="materials">
+          <h5 class="requadre">Tapís gruix 4,5 b/normal</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Tapis-antilliscant.png" alt="Tapís gruix 4,5 b/normal">
+            </div>
+            <div class="material-text">
+              <p>TAPIS ANTILLISCANT SPEZIAL.<br>
+              Mesures: 1,85 de llargada x 60 cm d’amplada i 4,5 mm de gruix. Molt bona adherència i comoditat en el seu trasllat. La "mare de totes les estores". Molt bona relació qualitat/preu. Aquest tapís antilliscant té una superfície estable i excel·lents qualitats d’amortiment, essent flexible i suau al tacte. Durarà molts anys en un estat excel·lent. Tots els materials emprats en la seva fabricació són totalment segurs i no causen al·lèrgies. Certificació ecològica Oeko-Tex Standard 100 Classe 1. Rentada: a mà o a màquina no superar els 40° graus, no admet assecadora.</p>
+              <p>Preu 31 €</p>
+            </div>
+          </div>
+        </div><!-- #tapis-gruixut-normal -->
+
+        <div id="tapis-gruixut-llarg" class="materials">
+          <h5 class="requadre">Tapís gruix 4,5 c/llarg</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Tapis-antilliscant.png" alt="Tapís gruix 4,5 c/llarg">
+            </div>
+            <div class="material-text">
+              <p>TAPIS ANTILLISCANT SPEZIAL.<br>
+              Mesures: 1,95 de llargada x 60 cm d’amplada i 4,5 mm de gruix. Molt bona adherència i comoditat en el seu trasllat. La "mare de totes les estores". Molt bona relació qualitat/preu. Aquest tapís antilliscant té una superfície estable i excel·lents qualitats d’amortiment, essent flexible i suau al tacte. Durarà molts anys en un estat excel·lent. Tots els materials emprats en la seva fabricació són totalment segurs i no causen al·lèrgies. Certificació ecològica Oeko-Tex Standard 100 Classe 1. Rentada: a mà o a màquina no superar els 40° graus, no admet assecadora.</p>
+              <p>Preu 33 €</p>
+            </div>
+          </div>
+        </div><!-- #tapis-gruixut-llarg -->
+
+        <div id="totxo" class="materials">
+          <h5 class="requadre">Totxo TPL</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Material-Totxo-TPL.png" alt="Totxo TPL">
+            </div>
+            <div class="material-text">
+              <p>Totxo de fusta. Mides en cms. 21 x 1O,5 x 7</p>
+              <p>Preu 4 €</p>
+            </div>
+          </div>
+        </div><!-- #totxo -->
+
+      </div><!-- .grid-material -->
+
+    </div><!-- #material -->
+
+
+    <div id="bibliografia" class="reticula apartats-info">
+      <h4>Bibliografia</h4>
+
+      <!-- Aprofito idèntica estructura que per #material -->
+      <div class="grid-material">
+
+        <div class="materials">
+          <h5 class="requadre">00 - YOGA JWALA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-00 - YOGA JWALA.png" alt="00 - YOGA JWALA">
+            </div>
+            <div class="material-text">
+              <p>Revista de l’AEYI.<br>Revista anual elaborada i publicada des de l’any 2000, per la Associació Espanyola de Ioga Iyengar (AEYI). S’hi recullen articles de gran interès per als practicants de ioga Iyengar i per als membres de l’Associació.<br>Distribució gratuïta entre socis/es de l’AEYI.</p>
+              <p>Preu 0 €</p>
+            </div>
+          </div>
+        </div><!-- 00 - YOGA JWALA -->
+
+        <div class="materials">
+          <h5 class="requadre">00 - YOGA RAHASYA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-00 - YOGA RAHASYA.png" alt="00 - YOGA RAHASYA">
+            </div>
+            <div class="material-text">
+              <p>Revista del RIMYI.<br>Revista oficial del Ramamani Iyengar Memorial Yoga Institute (RIMYI), de Pune (Índia)i el Light on Yoga Research Trust, (LOYRT), Mumbai.<br>S’edita cada trimestre en anglès.<br>La Associació Espanyola de Ioga Iyengar (AEYI) proporciona la traducció al castellà d’aquesta revista als membres que així ho desitgin i que siguin subscriptors d’aquesta.<br>Cal demanar-ne la subscripció a l’AEYI.</p>
+            </div>
+          </div>
+        </div><!-- 00 - YOGA RAHASYA -->
+
+        <div class="materials">
+          <h5 class="requadre">01 - LUZ SOBRE EL YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-01 - LUZ SOBRE EL YOGA.png" alt="01 - LUZ SOBRE EL YOGA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"Luz sobre el Yoga" és el llibre que per primera vegada va portar el Ioga al gran públic occidental. Des de la seva aparició, s'ha convertit en un clàssic i el seu autor ha estat reconegut com el mestre de Ioga més internacionalment respectat i volgut.</p>
+              <p>Gràcies a "Luz sobre el Yoga" desenes de milers de persones han après a fer del Ioga una part essencial de la seva vida quotidiana. Aquesta edició completa de gran format ha estat especialment concebuda per a un ús més senzill. Sens dubte, seguirà sent la guia essencial per a tota persona interessada en el Ioga, des del principiant fins al practicant de nivell més avançat.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 30 €</p>
+            </div>
+          </div>
+        </div><!-- 01 - LUZ SOBRE EL YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">02 - LUZ SOBRE EL PRANAYAMA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-02 - LUZ SOBRE EL PRANAYAMA.png" alt="02 - LUZ SOBRE EL PRANAYAMA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>L’essència del coneixement de les asana ja ha estat presentada per l’autor en la seva obra clàssica "Luz sobre el Yoga". Ara la seva maduresa i refinament en el pranayama es plasmen en aquest llibre. El programa dura 200 setmanes i es requereix entre 15 i 30 minuts diaris. El lector també disposa d’un glossari de termes de més de 30 pàgines així com un índex. Les 190 fotografies del llibre mostren la cura meticulosa que s’ha tingut en la seva preparació, i iŀlustren les formes de com s’han d’utilitzar els exercicis. En resum, recomanem entusiàsticament aquest llibre a tots els interessats en la respiració ióguica.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 27 €</p>
+            </div>
+          </div>
+        </div><!-- 02 - LUZ SOBRE EL PRANAYAMA -->
+
+        <div class="materials">
+          <h5 class="requadre">03 - YOGA PARA LA MUJER</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-03 - YOGA PARA LA MUJER.png" alt="03 - YOGA PARA LA MUJER">
+            </div>
+            <div class="material-text">
+              <p>GEETA S. IYENGAR.<br>Geetta S. Iyengar, filla del cèlebre Mestre de ioga BKS Iyengar, és considerada com la més gran ioguini de la nostra època. Geetta considera que l’objectiu d’aquest llibre és compartir els seus coneixements amb "les meves germanes del món sencer"; això és, ajudar a les dones que treballen, mestresses de casa i/o mares de família a alleugerir les pressions físiques i mentals a les quals estan subjectes. El secret de la salut és el ioga.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 30 €</p>
+            </div>
+          </div>
+        </div><!-- 03 - YOGA PARA LA MUJER -->
+
+        <div class="materials">
+          <h5 class="requadre">04 - LA LUZ DEL YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-04 - LA LUZ DEL YOGA.png" alt="04 - LA LUZ DEL YOGA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>Iŀlustrat amb 150 fotografies, aquesta concisa edició del mètode de ioga més conegut del món ofereix una introducció a la filosofia i la pràctica del ioga, una detallada descripció de 57 postures claus, tècniques per a silenciar la ment a través d'exercicis de respiració, així com un complet glossari de termes de ioga.</p>
+              <p>"La Luz del Yoga" és una breu edició que brindarà l’art bàsic del Ioga a una audiència molt alta i per a una pràctica superior.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 14 €</p>
+            </div>
+          </div>
+        </div><!-- 04 - LA LUZ DEL YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">05 - LUZ SOBRE LOS YOGASUTRAS DE PATANJALI</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-05 - LUZ SOBRE LOS YOGASUTRAS DE PATANJALI.png" alt="05 - LUZ SOBRE LOS YOGASUTRAS DE PATANJALI">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>La filosofia del ioga va ser descrita per primera vegada en els Ioga-sutres de, una recopilació d’aforismes transmesa fa més de dos mil anys pel savi indi Patañjali.<br>Aquests sutres constitueixen el primer estudi de la psique humana, i segueixen sent la seva exposició més profunda i iŀluminadora. En ells Patañjali aborda l’enigma de l’existència humana i mostra com, a través de la pràctica del ioga, podem autotransformar-nos, controlar la ment i les emocions, superar els obstacles de la nostra evolució espiritual i aconseguir la meta del ioga: kaivalya, l’alliberament de la inclinació als desitjos i accions mundanes, i la unió amb el diví.<br>Aquesta edició única conté una nova traducció dels sutres i també un comentari a càrrec del més important mestre de ioga del món, BKS Iyengar, que ha enriquit el text amb la seva pròpia saviesa i experiència en la pràctica del ioga. El resultat és un llibre útil i accessible, d’immens valor tant per a estudiants de la filosofia índia com per als practicants de ioga.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 20 €</p>
+            </div>
+          </div>
+        </div><!-- 05 - LUZ SOBRE LOS YOGASUTRAS DE PATANJALI -->
+
+        <div class="materials">
+          <h5 class="requadre">05.b EL CORAZÓN DE LOS YOGA SUTRAS</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-05-b-Corazon-yoga-sutras.png" alt="05.b EL CORAZÓN DE LOS YOGA SUTRAS">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>NOVETAT: El testament espiritual del més gran Mestre de Ioga, que ens va deixar el 20 d'agost de 2014.<br>Una obra imprescindible tant pels practicants de ioga com pels interessats en l'espiritualitat hindú.<br>Aquest llibre no és tan sol un comentari sobre el text de Patanjali, sinó que va molt més enllà. En ell, Sri Iyengar presenta els sutres d'una manera innovadora: el Mestre ha reordenat els sutres per temes i els ha interrelacionat, oferint-nos la seva visió d'ells des d'una innovadora perspectiva i sempre a través del prisma d'una comprensió derivada de tota una vida dedicada a la pràctica i a l'estudi del ioga.<br>Es tracta, sense dubtes, d'un fantàstic llibre que no hauria de faltar en la biblioteca de cap practicant de Ioga Iyengar, ni en la de cap estudiós de l'obra de Patanjali.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 20 €</p>
+            </div>
+          </div>
+        </div><!-- 05.b EL CORAZÓN DE LOS YOGA SUTRAS -->
+
+        <div class="materials">
+          <h5 class="requadre">06 - EL ÁRBOL DEL YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-06-Arbol-del-yoga.png" alt="06 - EL ÁRBOL DEL YOGA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>El llibre més clar, concís i iŀluminador sobre el ioga, tant en la seva vessant més filosòfica com en el seu costat més pràctic. El reconegut mestre Iyengar ens parla de com el ioga afronta temes sobre la salut, l'amor, la mort, l'experiència mística, els mestres i l'ensenyament. Un llibre imprescindible pels practicants del ioga així com per aquells que simplement vulguin conèixer l'essència de l'espiritualitat hindú.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 11 €</p>
+            </div>
+          </div>
+        </div><!-- 06 - EL ÁRBOL DEL YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">06.cat - L’ARBRE DEL IOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-06-cat-Arbre-del-ioga.png" alt="06.cat - L’ARBRE DEL IOGA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>L’arbre del ioga. Guia per a integrar el ioga a la vida diària.<br>A L’arbre del ioga, B.K.S. Iyengar ens presenta la part teòrica i filosòfica del ioga d’una manera clara i directa. El mestre parla del ioga com d’un camí en què l’experiència espiritual i la pràctica física van de la mà i no pot existir una sense l’altra. Des del principiant fins al veterà, tothom trobarà en aquest llibre una valuosa eina de consulta i recolzament en la seva experiència amb el gran món del ioga.</p>
+              <p>"És el meu desig compartir amb tots vosaltres la joia de la vida a través del ioga i, per tant, estic molt content de parlar-vos a través d’aquest llibre. Ioga significa reunir-se i, ara mateix, el ioga ens està reunint gràcies a aquestes pàgines." (B.K.S. Iyengar).<br>PAGÈS EDITORS.</p>
+              <p>Preu 18 €</p>
+            </div>
+          </div>
+        </div><!-- 06.cat - L’ARBRE DEL IOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">07 - LUZ SOBRE LA VIDA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-07 - LUZ SOBRE LA VIDA.png" alt="07 - LUZ SOBRE LA VIDA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>B.K.S. Iyengar, fundador del mètode d'ensenyament iogui conegut com "Ioga Iyengar", ens convida a realitzar un viatge interior; un viatge pensat per a millorar i augmentar l'estabilitat física, la vitalitat emocional, la claredat mental, la saviesa inteŀlectual i la beatitud espiritual.<br>En aquest llibre càlid, enginyós, lúcid i sobreïxent d'humor, el mestre Iyengar aŀludeix al paper que les postures i tècniques de respiració ioguiques acompleixen en la nostra recerca de plenitud, als obstacles externs i interns que ens impedeixen progressar al llarg del camí i a la manera en que el ioga pot ajudar-nos a viure en harmonia amb el món que ens envolta. Utilitza anècdotes de la seva pròpia vida i exemples de la cultura moderna a fi d'iŀlustrar que la percepció conscient que ofereix el ioga pot millorar la nostra vida de moltes maneres, tant pràctiques com profundes.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 18 €</p>
+            </div>
+          </div>
+        </div><!-- 07 - LUZ SOBRE LA VIDA -->
+
+        <div class="materials">
+          <h5 class="requadre">08-1 - LA ESENCIA DEL YOGA Vol.1</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-1 - LA ESENCIA DEL YOGA Vol.1.png" alt="08-1 - LA ESENCIA DEL YOGA Vol.1">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l’objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L’obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>El primer volum conté - entre d’altres temàtiques - la definició del ioga, textos biogràfics del mestre Iyengar i l’exposició clàssica del Yoga de Patañjali.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 25 €</p>
+            </div>
+          </div>
+        </div><!-- 08-1 - LA ESENCIA DEL YOGA Vol.1 -->
+
+        <div class="materials">
+          <h5 class="requadre">08-2 - LA ESENCIA DEL YOGA Vol.2</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-2 - LA ESENCIA DEL YOGA Vol.2.png" alt="08-2 - LA ESENCIA DEL YOGA Vol.2">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l'objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L'obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>El segon volum conté una exposició dels vuit estadis del ioga (ashtanga yoga), una detallada presentació del "hatha yoga" i, en la seva tercera part, l'explicació que dóna l'autor de la seva aportació especifica al ioga.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 30 €</p>
+            </div>
+          </div>
+        </div><!-- 08-2 - LA ESENCIA DEL YOGA Vol.2 -->
+
+        <div class="materials">
+          <h5 class="requadre">08-3 - LA ESENCIA DEL YOGA Vol.3</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-3 - LA ESENCIA DEL YOGA Vol.3.png" alt="08-3 - LA ESENCIA DEL YOGA Vol.3">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l'objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L'obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>El tercer volum tracta temes que van des de la vessant terapèutica i l’ayurveda fins l’educació i els esports; des de la pràctica (sadhana) fins l’ensenyament del ioga com art, ciència i manera de vida.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 25 €</p>
+            </div>
+          </div>
+        </div><!-- 08-3 - LA ESENCIA DEL YOGA Vol.3 -->
+
+        <div class="materials">
+          <h5 class="requadre">08-4 - LA ESENCIA DEL YOGA Vol.4</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-4 - LA ESENCIA DEL YOGA Vol.4.png" alt="08-4 - LA ESENCIA DEL YOGA Vol.4">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l'objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L'obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>Aquest quart volum inicia la publicació d’entrevistes realitzades entre els anys 1958 i 1986, concedides a una gran varietat de revistes i diaris de tot el món.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 25 €</p>
+            </div>
+          </div>
+        </div><!-- 08-4 - LA ESENCIA DEL YOGA Vol.4 -->
+
+        <div class="materials">
+          <h5 class="requadre">08-5 - LA ESENCIA DEL YOGA Vol.5</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-5 - LA ESENCIA DEL YOGA Vol.5.png" alt="08-5 - LA ESENCIA DEL YOGA Vol.5">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l'objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L'obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>Aquest cinquè volum continua la publicació d’entrevistes concedides a una gran varietat de revistes i diaris de tot el món entre els anys 1987 i 1992.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 27 €</p>
+            </div>
+          </div>
+        </div><!-- 08-5 - LA ESENCIA DEL YOGA Vol.5 -->
+
+        <div class="materials">
+          <h5 class="requadre">08-6 - LA ESENCIA DEL YOGA Vol.6</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-6 - LA ESENCIA DEL YOGA Vol.6.png" alt="08-6 - LA ESENCIA DEL YOGA Vol.6">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l'objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L'obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>Aquest sisè volum finalitza la coŀlecció d’entrevistes concedides a una gran varietat de revistes i periòdics de tot el món, oferint les realitzades entre els anys 1993 i 1999.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 24 €</p>
+            </div>
+          </div>
+        </div><!-- 08-6 - LA ESENCIA DEL YOGA Vol.6 -->
+
+        <div class="materials">
+          <h5 class="requadre">08-7 - LA ESENCIA DEL YOGA Vol.7</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-08-7 - LA ESENCIA DEL YOGA Vol.7.png" alt="08-7 - LA ESENCIA DEL YOGA Vol.7">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>"La esencia del Yoga" consisteix en un ampli projecte editorial amb l'objectiu de reunir tot el material ofert pel mestre BKS Iyengar en articles, conferències, entrevistes, sessions de preguntes i respostes i cursos de formació.<br>L'obra, seleccionada, corregida i supervisada pel propi BKS Iyengar, està destinada a esdevenir un altre referent tant per a practicants de ioga com per a aquells que volen conèixer i aprofundir en aquesta incomparable tradició espiritual.</p>
+              <p>Aquest setè volum inaugura la publicació de les sessions de preguntes i respostes que BKS Iyengar ha anat concedint durant els seus anys d'ensenyament. Les preguntes i respostes han estat classificades segons els seus continguts, i en aquest volum es presenten les que tracten del ioga en general, Patañjali i el ioga, els diferents estadis del astanga ioga, la psicologia pràctica del ioga i alguns ajustos particulars per a la pràctica de asana.<br>EDITORIAL KAIRÓS.</p>
+              <p>Preu 24 €</p>
+            </div>
+          </div>
+        </div><!-- 08-7 - LA ESENCIA DEL YOGA Vol.7 -->
+
+        <div class="materials">
+          <h5 class="requadre">11 - YOGA, EL MÉTODO IYENGAR</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-11-Yoga-el-metodo-Iyengar.png" alt="11 - YOGA, EL MÉTODO IYENGAR">
+            </div>
+            <div class="material-text">
+              <p>SHYAM MEHTA.<br>Llibre de consulta indispensable pels seguidors del mètode Iyengar. Més de 100 postures clau iŀlustrades pas a pas. Examina les tècniques de respiració, relaxació i meditació. Inclou cursos progressius per a la pràctica a casa i programes terapèutics per a afeccions concretes, així com una guia de la filosofia del ioga.</p>
+              <p>La seva claredat per a la pràctica quotidiana el fa únic.<br>EDICIONES TUTOR.</p>
+              <p>Preu 26 €</p>
+            </div>
+          </div>
+        </div><!-- 11 - YOGA, EL MÉTODO IYENGAR -->
+
+        <div class="materials">
+          <h5 class="requadre">12 - YOGA IYENGAR, MANUAL DE INICIACIÓN</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-12-Yoga-Iyengar-manual-iniciacion.png" alt="12 - YOGA IYENGAR, MANUAL DE INICIACIÓN">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>Actualment existeixen centres de ioga Iyengar per tot el món, i s'estima que el ioga Iyengar compta amb milions de practicants. Aquest manual ofereix una valuosa introducció a aquest mètode que permet millorar el benestar físic, mental i emocional. Amb fotografies seqüencials des de diversos angles i instruccions clares i detallades de les postures bàsiques. Postures especialment adaptades per a iniciar-se a qualsevol edat.<br>EDICIONES TUTOR.</p>
+              <p>Preu 20 €</p>
+            </div>
+          </div>
+        </div><!-- 12 - YOGA IYENGAR, MANUAL DE INICIACIÓN -->
+
+        <div class="materials">
+          <h5 class="requadre">13 - INTRODUCCIÓN AL YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-13-Introduccion-al-yoga.png" alt="13 - INTRODUCCIÓN AL YOGA">
+            </div>
+            <div class="material-text">
+              <p>MIRA MEHTA.<br>Tots sabem que el ioga és meravellós per a alleugerir l'estrés i mantenir la salut física i mental, però comprenem realment com i per què funciona?<br>En el ioga la base és crucial i només és possible progressar en confiança i capacitat si es comprenen bé els fonaments. Aquesta innovadora obra de Mira Mehta aprofundeix fins a arribar a les arrels mateixes d'aquest antic art, per explicar com la filosofia que sustenta el ioga ofereix un significat de la seva pràctica de vital importància.<br>Utilitzant moderns mètodes d'ensenyament, "Introducción al yoga" descobreix els secrets de l'estirament i la flexió, de l'alineació en el moviment, de la torsió de la columna i del paper de la respiració en l'estabilització i el control de la ment. També explica la importància dels accessoris, ja sigui una taula de centre o un tamboret de cuina, com ajuda per treure el major partit de les postures, independentment del nivell que es tingui en ioga.<br>EDICIONES TUTOR.</p>
+              <p>Preu 26 €</p>
+            </div>
+          </div>
+        </div><!-- 13 - INTRODUCCIÓN AL YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">14 - EL YOGA Y LA SALUD</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-14 - EL YOGA Y LA SALUD.png" alt="14 - EL YOGA Y LA SALUD">
+            </div>
+            <div class="material-text">
+              <p>MIRA MEHTA.<br>Tot el món sap que el ioga és beneficiós per a la salut, però la majoria de les persones ignora per què. En aquesta obra, per primera vegada, els beneficis pràctics del ioga són examinats a la llum de l'Ayurveda, la ciència mèdica índia.<br>Aquest llibre de Mira Mehta ofereix instruccions i fotografies detallades de les postures i seqüències de ioga per a enfortir i eliminar la tensió de totes les parts del cos. Conté senzilles sèries de pràctica per al principiant, però està també ple d'informació per a antics estudiants i consumats professors de ioga. També conté lectures que eleven l'esperit, traduïdes dels principals textos sànscrits de ioga, a fi d'oferir les opinions que el ioga manté sobre l'existència i fomentar una serena actitud mental.<br>EDICIONES TUTOR. Actualment no disponible.</p>
+              <p>Preu 26 €</p>
+            </div>
+          </div>
+        </div><!-- 14 - EL YOGA Y LA SALUD -->
+
+        <div class="materials">
+          <h5 class="requadre">15 - LA CONTEMPLACIÓN DEL HÉROE</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-15-La-contemplacion-del-heroe.png" alt="15 - LA CONTEMPLACIÓN DEL HÉROE">
+            </div>
+            <div class="material-text">
+              <p>CHRISTIAN PISANO.<br>Aquesta magna obra ofereix una compilació extraordinària d’ensenyaments, llegendes i simbolismes dels noms de les āsanas, tot això iŀlustrat amb més de 250 magnífiques fotografies i imatges.<br>Art i pràctica del ioga a partir dels ensenyaments de B.K.S. Iyengar<br>Inspirat a la llum de l’ensenyament de BKS Iyengar i del Xivaisme no-dual de Caixmir, el mestre Christian Pisano ressitua la pràctica postural dins del vast àmbit que constitueix el Ioga. L’autor ofereix, en aquesta magna obra, una compilació extraordinària d’ensenyaments rellevants, de llegendes sovint desconegudes i de simbolismes amagats darrere dels noms de les asanas, acompanyats de cites eloqüents, i amb més de 250 magnífiques fotografies i iŀlustracions.<br>Christian Pisano practica Ioga Iyengar des de fa trenta anys i és una de les tres úniques persones al món que va rebre de BKS Iyengar un certificat Sènior avançat. Va viure en Puna, Índia, durant diversos anys de la seva joventut i es va dedicar a explorar l’art sagrat del Ioga sota la guia del seu gurú, BKS Iyengar. Durant aquest període també va aprofundir en l’estudi de diverses filosofies i va aprendre sànscrit.<br>EDICIONES TUTOR.</p>
+              <p>Preu 40 €</p>
+            </div>
+          </div>
+        </div><!-- 15 - LA CONTEMPLACIÓN DEL HÉROE -->
+
+        <div class="materials">
+          <h5 class="requadre">21 - CITTAVIJÑANA de las YOGASANAS</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-21-Cittavijnana-de-las-yogasanas.png" alt="21 - CITTAVIJÑANA de las YOGASANAS">
+            </div>
+            <div class="material-text">
+              <p>PRASHANT S. IYENGAR.<br>Prashant S. Iyengar exposa en primer lloc, la necessitat de la cultura iogui com un pilar constitutivament inherent en el programa educatiu de qualsevol adepte al ioga, i en segon lloc, l’aplicació pràctica dels paradigmes de treball clàssics que han de ser inexorablement introduïts en la sādhana de tot estudiant sincer del ioga, si desitja avançar en el cultiu de citta.<br>En aquest llibre s’explica en què consisteixen i com s’apliquen mudres i kriyes sobre els elements, prāṇes, vāyus i chakres, i, per altra banda busca familiaritzar-nos amb els conceptes filosòfics més importants quens permetin esbotzar un paisatge de mires més amplies en quan a la visió del ioga.<br>ECOYOGA.</p>
+              <p>Preu 12 €</p>
+            </div>
+          </div>
+        </div><!-- 21 - CITTAVIJÑANA de las YOGASANAS -->
+
+        <div class="materials">
+          <h5 class="requadre">22 - YOGA EN ACCIÓN. UN CURSO PRELIMINAR</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-22-Yoga-en-accion-Cuso-preliminar.png" alt="22 - YOGA EN ACCIÓN. UN CURSO PRELIMINAR">
+            </div>
+            <div class="material-text">
+              <p>GEETA S.IYENGAR.<br>Un curs preliminar d’asana i pranayama basat en el programa impartit en el Ramamani Iyengar Memorial Yoga Institute de Pune. Aquest llibre guiarà, amb una adequada orientació, als alumnes quan treballin a casa practicant asana i pranayama.<br>A vegades està disponible en català.<br>El proporciona l’AEYI.</p>
+              <p>Preu 22 €</p>
+            </div>
+          </div>
+        </div><!-- 22 - YOGA EN ACCIÓN. UN CURSO PRELIMINAR -->
+
+        <div class="materials">
+          <h5 class="requadre">23 - YOGA EN ACCIÓN. CURSO INTERMEDIO I</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-23-Yoga-en-accion-Cuso-intermedio.png" alt="23 - YOGA EN ACCIÓN. CURSO INTERMEDIO I">
+            </div>
+            <div class="material-text">
+              <p>GEETA S.IYENGAR.<br>La AEYI té l'honor de presentar la traducció al castellà del llibre de Geeta S. Iyengar: "Curs Intermedi I". Aquest llibre, eminentment pràctic i pertanyent a la seriï "Ioga en acció", és la continuació de "Un curs preliminar", i aborda, amb explicacions detallades i nombroses iŀlustracions, les postures i pranayamas del nivell intermedi I, basant-se al programa de pràctica impartit en el RIMYI.<br>El proporciona l’AEYI.</p>
+              <p>Preu 22 €</p>
+            </div>
+          </div>
+        </div><!-- 23 - YOGA EN ACCIÓN. CURSO INTERMEDIO I -->
+
+        <div class="materials">
+          <h5 class="requadre">31 - YOGA. EL SENDERO HACIA LA SALUD HOLÍSTICA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-31-Yoga-Sendero-salud-holistica.png" alt="31 - YOGA. EL SENDERO HACIA LA SALUD HOLÍSTICA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>Rebi una classe magistral de BKS Iyengar, un dels millors professors de ioga del món, i canviï la seva vida.<br>Iyengar és la modalitat de ioga més practicada gràcies al benestar físic, mental i emocional que genera. Per a moltes persones és la clau per a una vida feliç.<br>En aquest llibre, el propi gurú ens guia a través de les asanas, pas a pas, i explica la seva filosofia, amb noves i sorprenents fotografies que ho mostren en plena pràctica.<br>El ioga és per a tots. No cal ser un expert ni estar en una forma física perfecta per practicar les asanas que es descriuen en aquest llibre. La tensió que comporta la vida moderna pot provocar dolors físics i malalties, ja que en la recerca de l’èxit material descuidem el nostre cos. L’estrès de la vida moderna també pot ser la causa de sofriment mental. El ioga ajuda a integrar els plànols mental i físic, al mateix temps que proporciona un equilibri interior i exterior.<br>BKS Iyengar explica la seva extraordinària vida i els seus ensenyaments a través de les seves pròpies paraules. Un llibre per a totes les edats i nivells, amb un curs de vint setmanes per a principiants. Conté seqüències de asanas especialment desenvolupades per ajudar a tractar més de vuitanta malalties, des de l’asma i l’artritis fins a la síndrome del còlon irritable i la diabetis.<br>EDITORIAL BLUME.</p>
+              <p>Preu 40 €</p>
+            </div>
+          </div>
+        </div><!-- 31 - YOGA. EL SENDERO HACIA LA SALUD HOLÍSTICA -->
+
+        <div class="materials">
+          <h5 class="requadre">32 - YOGA. SABIDURÍA Y PRÁCTICA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-32-Yoga-sabiduria-practica.png" alt="32 - YOGA. SABIDURÍA Y PRÁCTICA">
+            </div>
+            <div class="material-text">
+              <p>BKS IYENGAR.<br>Descobreixi tot el que el ioga pot oferir a través d’un viatge per les paraules, les experiències i la filosofia del gurú i mestre de major rellevància internacional.<br>Presenta un conjunt d’estimulants asanes, exemplificades pas a pas, acompanyades de la veu del mestre. BKS IYENGAR transmet la saviesa dels antics textos ioguis, així com les lliçons apreses en el seu propi viatge vital, i comparteix els seus coneixements sobre els beneficis físics i espirituals que poden obtenir-se amb la pràctica del ioga.<br>Ioga per a l’alegria, per aconseguir una veritable pau interior i per a la vida.<br>EDITORIAL BLUME.</p>
+              <p>Preu 25 €</p>
+            </div>
+          </div>
+        </div><!-- 32 - YOGA. SABIDURÍA Y PRÁCTICA -->
+
+        <div class="materials">
+          <h5 class="requadre">35 - UNA SILLA PARA YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-35 - UNA SILLA PARA YOGA.png" alt="35 - UNA SILLA PARA YOGA">
+            </div>
+            <div class="material-text">
+              <p>EYAL SHIFRONI.<br>Aquesta guia és un modest intent d’explicar com es pot utilitzar una cadira per aprofundir i millorar la pràctica de Yogasana (postura de ioga). Neix de l’interès i l’entusiasme expressat pels meus alumnes durant les classes i tallers en els quals hem explorat diferents maneres d’utilitzar cadires. Ells em van demanar que documentés aquest treball per poder seguir practicant a casa. Esperem que aquesta presentació ajudi als practicants, als estudiants i als professors a fer un ús sistemàtic de les cadires en la seva pràctica, contribuint així a difondre el Ioga Iyengar per al benefici de tots.<br>AMAZON.</p>
+              <p>Preu 17 €</p>
+            </div>
+          </div>
+        </div><!-- 35 - UNA SILLA PARA YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">36 - PROPS PARA YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-36 - PROPS PARA YOGA.png" alt="36 - PROPS PARA YOGA">
+            </div>
+            <div class="material-text">
+              <p>EYAL SHIFRONI.<br>Inventats per B.K.S Iyengar, els suports han ajudat milions de persones a realitzar la seva visió que "Ioga és per a Tots". Els suports permeten a les persones de qualsevol edat i qualsevol condició de salut gaudir del benefici de la pràctica d’asanas (postures de ioga). Aquest llibre, el primer d’una sèrie, presenta usos clàssics i innovadors dels accessoris. Proporciona detallades instruccions, pas a pas, acompanyades de nombroses fotos i consells.<br>AMAZON.</p>
+              <p>Preu 19 €</p>
+            </div>
+          </div>
+        </div><!-- 36 - PROPS PARA YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">41 - LOS MÚSCULOS CLAVE EN EL HATHA YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-41-Musculos-clave-Hatha-yoga.png" alt="41 - LOS MÚSCULOS CLAVE EN EL HATHA YOGA">
+            </div>
+            <div class="material-text">
+              <p>RAY LONG.<br>Iŀlustracions tridimensionals clares i sorprenents que radiografien la musculatura i els ossos en cada postura de ioga. Un llibre interessant para tot aquell que treballa amb el cos.<br>Aquest llibre és una útil eina per a l’estudi i comprensió dels mecanismes del moviment a través del ioga, indicant la seva influència i resultats en el cos humà.<br>EDITORIAL ACANTO.</p>
+              <p>Preu 30 €</p>
+            </div>
+          </div>
+        </div><!-- 41 - LOS MÚSCULOS CLAVE EN EL HATHA YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">42 - LAS POSTURAS CLAVE EN EL HATHA YOGA</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-42 - LAS POSTURAS CLAVE EN EL HATHA YOGA.png" alt="42 - LAS POSTURAS CLAVE EN EL HATHA YOGA">
+            </div>
+            <div class="material-text">
+              <p>RAY LONG.<br>El llibre mostra la ciència que hi ha darrera la biomecànica i la psicologia de l'estirament muscular. S'aplica aquest coneixement a les diferents categories de postures per a descobrir els seus beneficis. També, a través d'imatges clares i concises, detalla les 55 postures clau del Hatha Yoga i ensenya què és el que funciona per tal d'obrir la teva pròpia porta a l'experiència individual del ioga.<br>EDITORIAL ACANTO.</p>
+              <p>Preu 30 €</p>
+            </div>
+          </div>
+        </div><!-- 42 - LAS POSTURAS CLAVE EN EL HATHA YOGA -->
+
+        <div class="materials">
+          <h5 class="requadre">45 - DICCIONARI SÀNSCRIT - CATALÀ</h5>
+          <div class="material-descrip clearfix">
+            <div class="material-img">
+              <img src="img/Biblio-45-Diccionari-Sanscrit-Catala.png" alt="45 - DICCIONARI SÀNSCRIT - CATALÀ">
+            </div>
+            <div class="material-text">
+              <p>OSCAR PUJOL.<br>Una obra de gran prestigi i un gran pas endavant en els estudis de sànscrit, llengua sagrada i d'erudició, la llengua dels textos clàssics de l'hinduisme. Una obra importantíssima i única, per ser el primer diccionari de gran envergadura entre el sànscrit i una llengua romànica, per la seva extensió en nombre d'entrades, en amplitud temàtica, en explicació enciclopèdica dels articles sobre l'hinduisme i la cultura índia en general, per la inclusió, per primer cop, de la doble etimologia (la tradicional dels gramàtics sànscrits i la de la lingüística comparada occidental). Amb un índex alfabètic de totes les entrades romanitzades.<br>ENCICLOPEDIA CATALANA.</p>
+              <p>Preu 85 €</p>
+            </div>
+          </div>
+        </div><!-- 45 - DICCIONARI SÀNSCRIT - CATALÀ -->
+
+      </div><!-- .grid-material -->
+
+    </div><!-- #bibliografia -->
+
+  </section><!-- E. Section INFORMACIÓ #info -->
+
+
+
+  <!-- E2. Frase Parallax #####################-->
+  <div class="contingut-parallax parallax fons-e2">
+    <div class="auxiliar">
+      <div class="orla-parallax">
+        <div class="text-parallax">
+          <h4>El ioga és un regal preciós de vida. Et dona més del que et pots imaginar. T'apropa al teu propi cos, profunditza en la teva saviesa interior i t'ensenya com estimar més a tu i als demés.</h4>
+          <p>Wang Dong</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- F. Section FAQS ################-->
+  <section id="faqs" class="seccio">
+
+    <div class="contingut titol-seccio">
+      <h3>Preguntes més freqüents</h3>
+    </div>
+
+    <div class="reticula apartats-info">
+      <p>És un recull de les preguntes que ens fa la gent que ve a informar-se als nostres centres.</p>
+
+      <!-- Aprofito idèntica estructura que per #material -->
+      <div class="grid-faqs">
+
+        <div class="llistat-FAQs">
+          <h4>A. Tipus de ioga</h4>
+          <ol>
+            <li><a href="#FAQs-A-1" onclick="closeNav()">Hi ha diversos tipus de ioga?</a></li>
+            <li><a href="#FAQs-A-2" onclick="closeNav()">El ioga que feu aquí, com és?</a></li>
+            <li><a href="#FAQs-A-3" onclick="closeNav()">Aquest tipus de ioga està basat en postures, és un ioga físic?</a></li>
+            <li><a href="#FAQs-A-4" onclick="closeNav()">Aquest ioga és terapèutic?</a></li>
+          </ol>
+
+          <h4>B. Edat</h4>
+          <ol>
+            <li><a href="#FAQs-B-1" onclick="closeNav()">A quina edat es pot començar a fer ioga?</a></li>
+            <li><a href="#FAQs-B-2" onclick="closeNav()">Fins a quina edat es pot practicar ioga?</a></li>
+          </ol>
+
+          <h4>C. Ioga per a mainada</h4>
+          <ol>
+            <li><a href="#FAQs-C-1" onclick="closeNav()">La classe per a nens/es, és com una classe per a persones adultes?</a></li>
+            <li><a href="#FAQs-C-2" onclick="closeNav()">Als infants que vénen a classe, els hi agrada?</a></li>
+            <li><a href="#FAQs-C-3" onclick="closeNav()">Quins beneficis obté la mainada amb la pràctica del ioga?</a></li>
+          </ol>
+        </div>
+
+        <div class="llistat-FAQs">
+          <h4>D. Sobre la pràctica</h4>
+          <ol>
+            <li><a href="#FAQs-D-1" onclick="closeNav()">Qualsevol persona pot fer-ne?</a></li>
+            <li><a href="#FAQs-D-2" onclick="closeNav()">Una persona que faci esport, pot fer ioga?</a></li>
+            <li><a href="#FAQs-D-3" onclick="closeNav()">Sóc molt rígid, puc fer ioga?</a></li>
+            <li><a href="#FAQs-D-4" onclick="closeNav()">Són difícils les postures?</a></li>
+            <li><a href="#FAQs-D-5" onclick="closeNav()">És dur el tipus de ioga que feu?</a></li>
+            <li><a href="#FAQs-D-6" onclick="closeNav()">Com reacciona el cos després d'una classe?</a></li>
+          </ol>
+
+          <h4>E. Respiració - Meditació - Relaxació - Xacres</h4>
+          <ol>
+            <li><a href="#FAQs-E-1" onclick="closeNav()">Vosaltres ensenyeu a respirar?</a></li>
+            <li><a href="#FAQs-E-2" onclick="closeNav()">Ensenyeu meditació?</a></li>
+            <li><a href="#FAQs-E-3" onclick="closeNav()">Feu relaxació a les vostres classes?</a></li>
+            <li><a href="#FAQs-E-4" onclick="closeNav()">Treballeu els xacres?</a></li>
+          </ol>
+
+          <h4>F. Decideixo venir</h4>
+          <ol>
+            <li><a href="#FAQs-F-1" onclick="closeNav()">Quan vingui, què cal portar?</a></li>
+            <li><a href="#FAQs-F-2" onclick="closeNav()">Si un dia no estic bé, millor que no vingui?</a></li>
+          </ol>
+        </div>
+
+        <!-- Segona part FAQs: respostes detallades -->
+        <div class="FAQs-A">
+          <h4>A. Tipus de ioga</h4>
+
+          <h5 id="FAQs-A-1" class="FAQs-h5">1. Hi ha diversos tipus de ioga?</h5>
+          <p>Més que diversos tipus de ioga, seria millor dir que hi ha diversos camins per arribar a l'estat de ioga.</p>
+
+          <h5 id="FAQs-A-2" class="FAQs-h5">2. El ioga que feu aquí, com és?</h5>
+          <p>Ens basem en les assanes (postures), i les treballem seguint un ordre. Primer treballem el cos que és més fàcil que treballar la ment. Quan tenim el cos preparat i amb un bon control, ens adonem que també hem estat treballant la ment -més volàtil i difícil de treballar- i el pas següent bé per si mateix: el control de la consciència.</p>
+          <p>Cal destacar que les característiques principals del mètode Iyengar, pel que fa al treball de les assanes, són l'alineació, la precisió, la intensitat i el dinamisme.</p>
+
+          <h5 id="FAQs-A-3" class="FAQs-h5">3. Aquest tipus de Ioga està basat en postures, és un ioga físic?</h5>
+          <p>De cap manera. El ioga físic no existeix, si fos físic, ja no seria ioga. En tota postura cal treballar el cos, tenir la ment serena i posar-hi la consciència.</p>
+          <p>El principi quan comences a practicar-lo, pot semblar físic però el cap d'un temps te n'adones que és molt més que un treball físic, és un treball d'interiorització, d'estar amb tu mateix, d'enfocar els problemes de la vida quotidiana d'una altra manera.</p>
+          <p>Com deia el nostre Mestre:</p>
+          <p><i>"Si no s'aconsegueix la llibertat en el cos, la llibertat en la ment és una idea lluny d'aconseguir".</i></p>
+
+          <h5 id="FAQs-A-4" class="FAQs-h5">4. Aquest ioga és terapèutic?</h5>
+          <p>Podem afirmar que aquest mètode, per la seva manera de treballar les postures, és considerat molt terapèutic.</p>
+          <p>El Mestre B.K.S. Iyengar ens deia:</p>
+          <p><i>"L'objectiu i la culminació del ioga és la visió de l'esperit, però té una gran quantitat de beneficiosos efectes coŀlaterals com en són la salut, la felicitat, la pau i l'equilibri".</i></p>
+        </div>
+
+        <div class="FAQs-B">
+          <h4>B. Edat</h4>
+
+          <h5 id="FAQs-B-1" class="FAQs-h5">1. A quina edat es pot començar a fer ioga?</h5>
+          <p>Es pot començar a qualsevol edat. El requisit fonamental per a començar la pràctica del ioga és la voluntat pròpia.</p>
+          <p>Als nostres centres poden començar nens a partir dels 5 anys.</p>
+
+          <h5 id="FAQs-B-2" class="FAQs-h5">2. Fins a quina edat es pot practicar Ioga?</h5>
+          <p>El ioga no té edat. Es pot practicar sempre. Un exemple clar és el nostre mestre B.K.S. IYENGAR que amb 95 anys va practicar fins a l'últim moment.</p>
+          <p>La franja d'edat del nostre alumnat osciŀla entre 5 i més de 80 anys. La majoria tenen entre 30 i 50 anys.</p>
+        </div>
+
+        <div class="FAQs-C">
+          <h4>C. Ioga per a mainada</h4>
+
+          <h5 id="FAQs-C-1" class="FAQs-h5">1. La classe per a nens/es és com una classe per a persones adultes?</h5>
+          <p>Els nens/es fan les postures molt més dinàmiques i fluïdes, sense donar gaire importància a la tècnica. Fan les mateixes assanes que les persones adultes però més variades i canviant l'ordre a cada classe.</p>
+
+          <h5 id="FAQs-C-2" class="FAQs-h5">2. Als infants que vénen a classe, els hi agrada?</h5>
+          <p>Els hi encanta. Fins i tot les postures que els hi ensenyem les practiquen a casa i les ensenyen als pares. Quan comença la setmana ja esperen amb iŀlusió que arribi el dimecres per poder venir a classe de ioga.</p>
+
+          <h5 id="FAQs-C-3" class="FAQs-h5">3. Quins beneficis obté la mainada amb la pràctica del ioga?</h5>
+          <p>Moltíssims. Agafen seguretat, augmenten l'autoestima, aprenen a calmar-se i a relaxar-se, milloren el desenvolupament de la musculatura motriu i milloren l'aprenentatge escolar perquè desenvolupa la capacitat d'atenció, memòria i concentració.</p>
+        </div>
+
+        <div class="FAQs-D">
+          <h4>D. Sobre la pràctica</h4>
+
+          <h5 id="FAQs-D-1" class="FAQs-h5">1. Qualsevol persona pot fer-ne?</h5>
+          <p>Sí, i tant, és molt recomanable fer-ne. Tant poden practicar-ho el jovent sa i fort com la gent gran, les persones rígides o les que tenen algun problema.</p>
+          <p>Una de les característiques del mètode Iyengar és la utilització de suports. Aquests ajuden a experimentar els beneficis que aporten les postures tant en l'àmbit físic com psicològic a persones que, d'una altra manera, no les podrien gaudir per lesions, rigidesa o edat.</p>
+          <p>Els suports que més s'utilitzen són: mantes, totxos, cinturons, cordes, cadires, diversos banquets... Tots els diferents suports que utilitzem foren creats pel nostre mestre B.K.S. Iyengar al llarg d'anys.</p>
+
+          <h5 id="FAQs-D-2" class="FAQs-h5">2. Una persona que faci esport, pot fer ioga?</h5>
+          <p>I tant, n'haurien de fer tots els esportistes. Una persona que faci esport està acostumada a fer força que és tot el contrari dels estiraments que es demanen en les postures de ioga.</p>
+          <p>Si un esportista fa ioga, millora el seu rendiment, evita lesions i l'ajuda a superar-les.</p>
+          <p>El millor rendiment ve perquè: augmentes l'agilitat i la flexibilitat del cos, guanyes velocitat, augmentes la capacitat dels pulmons, redueixes el temps de recuperació del cansament i millores la concentració.</p>
+          <p>La preparació de molts esportistes és fer peses i altres estris que donen força, contracció i augment de la massa muscular i obliden la importància de donar flexibilitat a la musculatura.</p>
+          <p>El mètode Iyengar, enforteix el cos, però en lloc de buscar una força de contracció el que busca és estirament i amb la seva pràctica evitar lesions, trencaments musculars, tendinitis...</p>
+          <p>En fi, és un complement extraordinari pels esportistes.</p>
+
+          <h5 id="FAQs-D-3" class="FAQs-h5">3. Sóc molt rígid, puc fer ioga?</h5>
+          <p>I per què no? Ser rígid o elàstic, no té res a veure amb el ioga.</p>
+          <p>Les persones elàstiques poden fer unes postures més vistoses, més espectaculars, que et poden enganyar visualment això no vol dir que siguin de gran qualitat.</p>
+          <p>La gent rígida soleu tenir més facilitat amb els alineaments i precisió que és el més important en la qualitat del ioga.</p>
+
+          <h5 id="FAQs-D-4" class="FAQs-h5">4. Són difícils les postures?</h5>
+          <p>Com en qualsevol altra activitat el secret està en una pràctica regular i constant.</p>
+          <p>El nostre Mestre B.K.S. Iyengar ens deia:</p>
+          <p><i>"La pràctica continuada i constant de les assanes realitzada amb percepció conscient portarà a l'èxit".</i></p>
+
+          <h5 id="FAQs-D-5" class="FAQs-h5">5. És dur el tipus de ioga que feu?</h5>
+          <p>Alguns alumnes quan comencen, diuen, que aquest tipus de ioga és dur. És normal que ho diguin, perquè fan força en lloc d'estirar, principalment els homes que sempre fan més força.</p>
+          <p>Si es fa força, els músculs es contrauen en lloc d'estirar-se. El nostre mestre B.K.S. IYENGAR deia que quan comences a fer ioga és impossible no fer força perquè la vida diària ens ho porta.</p>
+          <p>A mesura que es practiquen les postures deixem de fer força i comencem a estirar, a crear espai, a treballar amb relaxació.</p>
+
+          <h5 id="FAQs-D-6" class="FAQs-h5">6. Com reacciona el cos després d'una classe?</h5>
+          <p>Hi ha diverses maneres de reaccionar.</p>
+          <ul class="llista">
+            <li>No passa gairebé res.</li>
+            <li>Notem alguns cruiximents, "estaiat" o "agulletes". Això és el normal. La majoria de la gent, l'endemà de la classe nota cruiximents, el millor és tornar a practicar com més aviat millor, així marxen més ràpid. Amb el ioga es treballa tot el cos, fins i tot parts que no han treballat mai per això apareixen els cruiximents.</li>
+            <li>En altres persones aquests cruiximents són tan forts que arriben a pensar que estan malalts i s'espanten. Aquestes persones són les que més necessiten practicar i els recomano que insisteixin, que no es rendeixin.</li>
+          </ul>
+          <p>Jo personalment (l'Enric) vaig ser dels tercers. Quin mal em feia tot! Recordo que li deia al meu professor:</p>
+          <p><i>"Vols dir que em va bé el ioga?, això és terrible"</i> -i ell em contestava- <i>"El teu cos s'està posant bé, tinguem confiança".</i></p>
+        </div>
+
+        <div class="FAQs-E">
+          <h4>E. Respiració - Meditació - Relaxació - Xacres</h4>
+
+          <h5 id="FAQs-E-1" class="FAQs-h5">1. Vosaltres ensenyeu a respirar?</h5>
+          <p>És fonamental. Però curiosament, treballant les postures no parlem de la respiració ja que està comprovat que en el moment que en parles, els alumnes involuntàriament la manipulen.</p>
+          <p>Amb el mètode Iyengar, aprens a respirar realitzant les postures correctament.</p>
+          <p>Ensenyem a allargar l'abdomen i a obrir el pit, a obrir els tres diafragmes. Amb això, relaxes el diafragma anatòmic, els pulmons es mouen en llibertat i així respires bé.</p>
+
+          <h5 id="FAQs-E-2" class="FAQs-h5">2. Ensenyeu meditació?</h5>
+          <p>La meditació és un estat mental que no es pot ensenyar, de la mateixa manera que ningú ensenya a dormir.</p>
+          <p>Als nostres centres, preparem el cos amb les postures, amb la pràctica controlem la ment i finalment meditem.</p>
+          <p>El nostre Mestre de meditar en les postures en deia "meditació en acció".</p>
+          <p>També es pot meditar passejant, mirant un paisatge... vivint el dia a dia.</p>
+          <p>Moltes vegades vols fer meditació en la postura clàssica i no hi ha manera de meditar. L'estat de meditació ve quan ve.</p>
+
+          <h5 id="FAQs-E-3" class="FAQs-h5">3. Feu relaxació a les vostres classes?</h5>
+          <p>Contesto amb una pregunta, vols fer relaxació o vols relaxar-te? El ioga és molt més que una relaxació.</p>
+          <p>A les nostres classes no fem relaxació, però fem que surtis relaxat com a conseqüència de les assanes (postures) que relaxen i et porten a una pau interior.</p>
+          <p>Recordo una alumna que em va comentar: "És curiós, abans anava a unes classes de relaxació i encara em posava més nerviosa i aquí, que no fem relaxació, sí que em relaxo".</p>
+
+          <h5 id="FAQs-E-4" class="FAQs-h5">4. Treballeu els xacres?</h5>
+          <p>És clar que si, mitjançant les postures.</p>
+          <p>A classe no en parlem dels xacres, "els treballem". Si una persona està tancada, és impossible que els pugui obrir. Nosaltres l'ajudarem a obrir-se perquè les energies flueixin.</p>
+          <p>Als nostres centres aconseguim obrir i netejar els xacres treballant les postures correctament, amb alineació, precisió, intensitat i dinamisme que són els punts més important del mètode Iyengar.</p>
+        </div>
+
+        <div class="FAQs-F">
+          <h4>F. Decideixo venir</h4>
+
+          <h5 id="FAQs-F-1" class="FAQs-h5">1. Quan vingui, què cal portar?</h5>
+          <p>De material no cal que portis res, el centre et proporciona tot el que necessites.</p>
+          <p>Pel que fa a la teva roba, aconsellem que sigui de cotó i còmoda, que et permeti fer tots els moviments. Una samarreta i uns pantalons curts són la roba ideal. No cal portar mitjons.</p>
+          <p>Sí que cal portar tovallola, o tovalloletes humides d’un sol ús, per rentar-te els peus en arribar.</p>
+
+          <h5 id="FAQs-F-2" class="FAQs-h5">2. Si un dia no estic bé, millor que no vingui?</h5>
+          <p>Tot el contrari, el dia que no estàs bé, és el dia que més t'aprofitarà la pràctica. Però cal informar el professor de qualsevol dolor o molèstia.</p>
+          <p>Les dones, durant el període menstrual també han d'avisar, cal evitar certes postures i preferentment seguir una seqüencia especialment beneficiosa.</p>
+          <p>La única raó per a no practicar és la febre.</p>
+          <p>Si decideixes venir, és molt convenient llegir abans l'apartat de consells.</p>
+        </div>
+
+        <div id="img-faqs-1">
+          <img src="img/Tribuna-Namaskar retall.jpg" alt="Logotip">
+        </div>
+
+        <div id="img-faqs-2" class="img-faqs">
+          <img src="img/ElPou-Halasana.jpg" alt="BKS Iyengar">
+        </div>
+
+        <div id="img-faqs-3" class="img-faqs">
+          <img src="img/ElPou-Suport.jpg" alt="BKS Iyengar">
+        </div>
+
+        <div id="img-faqs-4" class="img-faqs">
+          <img src="img/Tribuna-Grup.jpg" alt="BKS Iyengar">
+        </div>
+
+        <div id="img-faqs-5" class="img-faqs">
+          <img src="img/Tribuna-Danurasana.jpg" alt="BKS Iyengar">
+        </div>
+
+        <div id="img-faqs-6" class="img-faqs">
+          <img src="img/ElPou-Virabadasana1.jpg" alt="BKS Iyengar">
+        </div>
+
+      </div><!-- .grid-faqs -->
+
+  </section><!-- F. Section FAQS #faqs-->
+
+
+
+  <!-- F2. Frase Parallax #####################-->
+  <div class="contingut-parallax parallax fons-f2">
+    <div class="auxiliar">
+      <div class="orla-parallax">
+        <div class="text-parallax">
+          <h4>La salut és fermesa en el cos, estabilitat en la ment i claredat en el pensament.</h4>
+          <p>BKS Iyengar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- G. Section RECEPTES #################-->
+  <section id="receptes" class="seccio">
+
+    <div class="contingut titol-seccio">
+      <h3>Receptes de cuina vegetariana</h3>
+    </div>
+
+    <div class="reticula grid-receptes">
+
+      <div class="intro-receptes">
+        <p>El complement perfecte per a la persona que practica ioga és mantenir una bona alimentació: natural, sana i equilibrada.</p>
+        <p>Nunc malesuada lorem ac neque laoreet laoreet. Nam dapibus consequat vestibulum. Nam blandit nisi id enim pharetra porta. Donec sit amet libero urna. Integer pharetra tempor convallis. Vivamus euismod ornare libero id mattis. Phasellus leo tellus, congue eu lobortis in, sodales auctor lacus. Aliquam feugiat, neque a aliquet porttitor, nisl enim mattis risus, nec scelerisque enim justo sed orci. Maecenas et tempus urna.</p>
+        <p>Proin est augue, suscipit vel sapien volutpat, laoreet eleifend magna. Mauris pharetra lorem ut lectus iaculis, ut viverra libero sagittis. Nunc augue tortor, hendrerit in leo nec, posuere eleifend libero. Morbi egestas justo vitae purus porttitor semper. </p>
+        <p>A continuació us oferim una sel·lecció de receptes vegetarianes, recopilades i preparades pel nostre professor Marc Sala</p>
+      </div><!-- .intro-receptes -->
+
+      <div id="img-receptes-1" class="img-faqs">
+        <img img src="img/Rec11-veg_class_825_550_int.jpg" alt="Logotip">
+      </div>
+
+      <div id="img-receptes-1-mobil">
+        <img img src="img/veg_class_825_550_500x333.jpg" alt="Logotip">
+      </div>
+
+    </div><!-- intro-receptes -->
+
+    <div class="titol-receptari">
+      <h3 class="requadre">Receptari</h3>
+    </div>
+
+    <div class="tira-quadres">
+    </div>
+
+    <div id="entrants" class="classif-receptes">
+      <h4 class="requadre">Entrants</h4>
+    </div>
+
+    <div id="receptari-entrants" class="receptari">
+      <div class="grid-receptari">
+        <div id="plat01" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-01-Dhokla-400x400.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Lasanya de carbassa, gorgonzola i salsa d'anet</h5>
+            <p>Dificultat: BAIXA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            45 minuts</p>
+          </div>
+        </div><!-- #plat01 -->
+
+        <div id="plat02" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-02-Formatge-cabra-400x400.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Amanida de formatge de cabra i julivert</h5>
+            <p>Dificultat: MITJA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            60 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat03" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-03-Buddha-bowl-400x400.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Cuscus amb escarola</h5>
+            <p>Dificultat: BAIXA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            45 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat04" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-04-Bowl-rice-vegetables.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Arròs de verdures estil pakistaní</h5>
+            <p>Dificultat: ALTA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            90 minuts</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- #receptari-entrants -->
+
+    <div id="principals" class="classif-receptes">
+      <h4 class="requadre">Plats principals</h4>
+    </div>
+
+    <div id="receptari-principals" class="receptari">
+      <div class="grid-receptari">
+
+        <div id="plat05" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-05-Espaguetis-veganos.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Arròs de verdures estil pakistaní</h5>
+            <p>Dificultat: ALTA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            90 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat06" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-06-Espaguetis-vegetarians.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Amanida de formatge de cabra i julivert</h5>
+            <p>Dificultat: MITJA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            60 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat07" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-07-Amanida-cogombre.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Lasanya de carbassa, gorgonzola i salsa d'anet</h5>
+            <p>Dificultat: BAIXA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            45 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat08" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-08-Espaguetis-xampis.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Arròs de verdures estil pakistaní</h5>
+            <p>Dificultat: ALTA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            90 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat09" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-09-Arros-groc.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Amanida de formatge de cabra i julivert</h5>
+            <p>Dificultat: MITJA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            60 minuts</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- #receptari-principals -->
+
+    <div id="postres" class="classif-receptes">
+      <h4 class="requadre">Postres</h4>
+    </div>
+
+    <div id="receptari-postres" class="receptari">
+      <div class="grid-receptari">
+
+        <div id="plat10" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-10-Arros-curri.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Amanida de formatge de cabra i julivert</h5>
+            <p>Dificultat: MITJA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            60 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat11" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-03-Buddha-bowl-400x400.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Arròs de verdures estil pakistaní</h5>
+            <p>Dificultat: ALTA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            90 minuts</p>
+          </div>
+        </div>
+
+        <div id="plat12" class="plats-receptari" onclick="openPlat01(); closeNav()">
+          <div class="ampliar">
+            <p>&#43;</p>
+          </div>
+          <img img src="img/Plat-04-Bowl-rice-vegetables.png" alt="Logotip">
+          <div class="nom-plat">
+            <h5 class="requadre">Amanida de formatge de cabra i julivert</h5>
+            <p>Dificultat: MITJA &nbsp;
+            <i class="far fa-clock"></i>&nbsp;
+            60 minuts</p>
+          </div>
+        </div>
+
+      </div><!-- .grid-receptari -->
+
+    </div><!-- #receptari-postres -->
+
+  </section><!-- #receptes -->
+
+
+  <section id="fitxes-receptes"><!-- Modals Fitxes receptes -->
+
+    <div id="plat01-text" class="plat-text clearfix">
+      <div class="tira-quadres">
+      </div>
+      <h3 class="requadre">Lasanya de carbassa, gorgonzola, ricotta i salsa d'anet</h3>
+      <span class="close-recep cursor" onclick="closePlat01()">&times;</span>
+      <img src="img/Lassanya.jpg" alt="Lassanya de carbassa">
+
+      <div class="descrip-recepta">
+        <p>Dificultat: BAIXA &nbsp;
+        <i class="far fa-clock"></i>&nbsp;
+        45 minuts</p>
+        <br>
+        <p>És aquest un plat deliciós que combina la dolçor de la carbassa amb l'amargor de l'anet. Sed ac libero mi. Maecenas id finibus libero. In nec nulla urna. In ultricies enim vel mauris ultricies iaculis. Nulla a sapien metus. Quisque sodales vitae libero eget aliquam. Donec vestibulum eget leo in aliquam. Pellentesque ultricies tortor nulla, ut mollis mi sagittis sit amet. Vivamus vitae augue leo. Aliquam dui turpis, hendrerit non purus et, scelerisque vehicula urna.</p>
+        <h5 class="source-esq">Informació nutricional</h5>
+        <p>El color ataronjat de la carbassa ens diu que conté betacarotens (els precursors de la vitamina A), nutrients essencials per a la visió, la pell i el bon estat del sistema immunitari. Maecenas porta laoreet velit a dignissim. Nulla fringilla pharetra nisi eget pulvinar. Nunc elementum scelerisque rhoncus. In commodo erat quis dolor vulputate pulvinar. Fusce ultricies urna eget erat suscipit, a molestie dui consequat. Nam vitae laoreet dui. Integer tempus pharetra nibh ac cursus.</p>
+
+        <h5 class="source-esq">Ingredients</h5>
+        <div class="ingredients clearfix">
+          <div class="">
+            <p>Ingredients per a 4 persones</p>
+            <ul class="llista">
+              <li>1 kg de carbassa violí</li>
+              <li>1 paquet de lasanya precuita</li>
+              <li>350 g de formatge ricotta</li>
+              <li>Fulles de sàlvia</li>
+              <li>120 g de formatge gorgonzola</li>
+              <li>100 g de mozzarella ratllada</li>
+              <li>1 c/s d'oli d'oliva verge extra</li>
+            </ul>
+          </div>
+          <div class="">
+            <p>Salsa verda d'anet:</p>
+            <ul class="llista">
+              <li>Un ramell d'anet</li>
+              <li>1 tassa de julivert fresc</li>
+              <li>2 c/s d'oli d'oliva</li>
+              <li>1 c/s de suc de llimona</li>
+              <li>1 c/s de pell de llimona ratllada</li>
+              <li>sal marina i pebre negre</li>
+            </ul>
+          </div>
+        </div>
+
+        <h5 class="source-esq">Preparació</h5>
+        <div class="ingredients clearfix">
+          <p>Per començar, preescalfem el forn a 200ºC. Preparem els fulls de lasanya. En un cassó amb aigua bullint, submergim els fulls de lasanya precuita uns 10' aprox. Si és pasta fresca, uns 7/10 minuts.</p>
+          <p>Els passem per aigua freda. Ho deixem eixugar damunt de paper absorbent.</p>
+          <img src="img/Rec1-images-2-500px.jpg" alt="Lassanya de carbassa">
+          <p>Fem la salsa d'anet: piquem el julivert i l'anet. Ratllem la pell de llimona. Posem l'anet, el julivert, l'oli d'oliva, el suc de llimona, la pell de llimona, la sal i el pebre en un bol i ho barregem amb les varetes manuals. Ho reservem.</p>
+          <p>Per preparar el facit, pelem i tallem la carbassa a làmines fines. Posem la carbassa en un recipient apte per al forn i ho amanim amb oli d'oliva, sal i pebre. Ho posem al forn, fins que es comencin a daurar i estiguin tendres. 20 minuts a 200ºC. Ho reservem.</p>
+          <p>Posem un parell de fulls en una safata de forn de manera que quedin mig dintre i mig fora de la safata. Retirem la carbassa del forn. Apugem la temperatura a 220ºC.</p>
+          <p>Farcim els fulls de lasanya amb la ricotta. Al damunt posem 4 làmines de carabassa, 1 fulla de sàlvia i 1 cullerada de gorgonzola.</p>
+          <p>Dobleguem els fulls de lasanya per fer una mena de sobre. Acabem amb una capa de full de lasanya. Fem tantes capes com ens doni la recepta (en surten un parell). Posem mozzarella pel damunt.</p>
+          <p>Ho posem al forn durant uns 15 minuts fins que el formatge s'hagi fos i quedi torrat pel damunt.</p>
+          <p>I per acabar, servim la lasanya sencera i hi fem un tall per la meitat perquè es vegi el formatge fos. Ho servim amb una mica de salsa verda d'anet pel damunt. </p>
+        </div>
+
+        <div class="pdf">
+          <h5 class="source-centre">Us podeu imprimir aquesta recepta descarregant el PDF adjunt</h5>
+          <p><i class="fas fa-file-pdf"></i></p>
+        </div>
+
+      </div><!-- .descrip-recepta -->
+
+
+
+    </div><!-- #plat01-text (lassanya-carbassa )-->
+
+  </section><!-- Modals Fitxes receptes -->
+
+
+
+
+  <!-- Poso l'script del slideshow al final del html, perquè sinó no rutlla -->
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+
+
+
+
+
+</body>
+
+</html>

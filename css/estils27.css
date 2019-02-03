@@ -1,0 +1,2602 @@
+/*
+Projecte LA TRIBUNA v27 - CSS
+========================================== */
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================
+ESTILS GLOBALS
+========================================== */
+
+/* Box-sizing: border-box */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* definim tipo global Open Sans, eliminem margins i paddings per defecte i definim variable color corporatiu */
+body {
+  --verd: rgb(0, 82, 38);
+  --verdclar: rgb(180, 230, 170);
+  --verdmoltclar: rgb(230, 250, 190);
+  --groc: rgb(250, 240, 120);
+  --gris: rgb(200, 200, 200);
+  --grisclar: rgb(230, 230, 230);
+  margin: 0;
+  padding: 0;
+}
+
+/* Limitació amplada màxima per pantalles molt grans >1200px */
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+/** FONT-SIZES **/
+
+html {
+  font-size: 16px;
+}
+
+h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2.5rem; /* 48px */
+  font-style: normal;
+  font-weight: 400;
+  color: var(--verd);
+  text-align: center;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+h2 span {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 2rem; /* 32px */
+  font-style: normal;
+  font-weight: 400;
+  color: var(--verd);
+  text-align: center;
+  text-transform: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+h3 span {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem; /* 24px */
+  font-style: normal;
+  font-weight: 400;
+  color: var(--verd);
+  text-align: left;
+  text-transform: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+h4 span {
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.25rem; /* 20px */
+  font-style: normal;
+  font-weight: 400;
+  color: var(--verd);
+  text-align: left;
+  text-transform: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+h5 span {
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem; /* 20px */
+  font-style: normal;
+  font-weight: 600;
+  color: var(--verd);
+  text-align: left;
+  text-transform: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+h6 span {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem; /* 14px = 0.875rem */
+  line-height: 1.25rem; /* 18px = 1.125rem */
+  font-style: normal;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+p span {
+  font-weight: bold;
+  color: var(--verd);
+  text-transform: uppercase;
+}
+
+/* Estils de text particulars */
+
+.requadre {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.source-esq {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.source-centre {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.pastilla {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.2rem;
+  margin: 0;
+  background-color: var(--grisclar);
+  width: 100%;
+}
+
+
+/* Lists */
+
+ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem; /* 14px = 0.875rem */
+  line-height: 1.25rem; /* 18px = 1.125rem */
+  font-style: normal;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+/* Assigno símbol vinyeta només per classe "llista", per evitar vinyetes al menú */
+ul.llista li:before {
+  content: "•"; /* Insert content that looks like bullets */
+  margin: 0.5rem 0;
+  padding-right: 8px;
+  color: var(--verd);
+}
+
+
+/* &&&&& Media queries s/html font-size */
+/* proporció font-size:16px >992 */
+/* Prenc les media queries definides x Bootstrap: 576, 768, 992, 1200px */
+
+/* &&&&& MQs 992px = 62rem */
+@media only screen and (max-width: 991.98px) {
+  html {
+    font-size: 14px;
+  }
+  p {
+    font-size: 13px!important;
+    line-height: 16.7px!important;
+  }
+}
+
+/* &&&&& MQs 768px = 48rem */
+@media only screen and (max-width: 767.98px) {
+  html {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px!important;
+    line-height: 15.4px!important;
+  }
+}
+
+/* &&&&& MQs 576px  (de moment, no)
+@media only screen and (max-width: 575.98px) {
+  html {
+    font-size: 10px;
+  }
+  p {
+    font-size: 12px!important;
+    line-height: 15.4px!important;
+  }
+}
+*/
+
+
+/* Altres estils genèrics */
+
+.majuscula {
+  text-transform: uppercase;
+}
+
+
+
+/** ==================================
+Estructura genèrica SECCIONS i DIVs
+=================================== **/
+
+section.seccio {
+  width: 100%;
+  margin: 0;
+  padding: 7rem 10vw 4rem 10vw;
+  height: auto;
+  border-top: 1px solid var(--verd);
+  border-bottom: 1px solid var(--verd);
+}
+
+div.contingut {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+div.titol-seccio {
+  border-bottom: 0.5px solid var(--verd);
+}
+
+div.reticula {
+  width: 100%;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+
+
+/* =====================================
+ESTILS LOCALS
+===================================== */
+
+
+
+/*** A. HEADER #############################***/
+
+header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+
+/* Desktop first */
+
+
+/** BARRA NAVEGACIÓ ORDINADOR **/
+/* L'organitzo com un grid amb 4 elements: centres-barra, contingut-barra, icona om i closebtn */
+/* Model Brassingtom */
+/* En fer scroll de la primera finestra, apareix la barr completa. Control x Javascript */
+div#navbar {
+  position: fixed;
+  display: block;
+  z-index: 2;
+  top: -2rem;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-bottom: 1px solid var(--verd);
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: top 0.3s;
+}
+
+/** BARRA NAVEGACIÓ MÒBIL **/
+/* Mateixes propietats que per ordinador, però sense omm, i inicialment oculta */
+div#mobile-navbar {
+  position: fixed;
+  z-index: 2;
+  top: -2rem;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-bottom: 1px solid var(--verd);
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: top 0.3s;
+  display: none;
+}
+
+div.grid-barra-flot {
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-rows: auto auto;
+}
+
+/* Laptop-first --> */
+ul#bar-laptop {
+  display: block;
+}
+ul#bar-nohover {
+  display: none;
+}
+
+div.centres-barra {
+  margin: 0 auto;
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+div.centres-barra p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.2rem; /* 14px = 0.875rem */
+  font-style: normal;
+  font-weight: 300;
+  color: var(--verd);
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0 0.2rem 0;
+}
+div.centres-barra p span {
+  text-transform: uppercase;
+}
+
+/* Efecte dropdown */
+
+/* Menú esquerra */
+ul.bar {
+  list-style: none;
+  text-decoration: none;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+ul.bar li {
+  display: inline-block; /* imprescindible perquè rutlli efecte escala en hover */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem; /* 14px = 0.875rem */
+  font-style: normal;
+  font-weight: 300;
+  color: var(--verd);
+  text-transform: uppercase;
+  text-align: left;
+  transition: all .5s ease-in-out; /* transició sempre en l'estat de repòs */
+  padding: 0.625rem 1.2rem;
+  position: relative;
+}
+
+ul.bar li a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--verd);
+}
+
+/* Cal redefinir estils de <p> dins de NAVBAR */
+ul.bar li p {
+  color: var(--verd);
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul.bar li ul {
+  display: none;
+}
+ul.bar li:hover {
+  cursor: pointer;
+  color: rgb(169, 169, 169);
+}
+ul.bar li a:hover {
+  cursor: pointer;
+  color: rgb(169, 169, 169);
+}
+ul.bar li:hover ul {
+  display: block;
+  margin-top: 0.625rem;
+  width: 200px;
+  left: 0;
+  position: absolute;
+}
+ul.bar li:hover ul li {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin: 0;
+  padding-right: 0.625rem; /* Sinó, falla Figueres */
+}
+ul.bar li:hover ul li:hover {
+  color: rgb(169, 169, 169);
+}
+
+ul#bar-laptop {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/* MQs per DISPOSITIUS TÀCTILS */
+@media (hover: none) {
+  ul#bar-laptop {
+    display: none;
+  }
+  ul#bar-nohover {
+    display: block;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+
+
+/* Xarxes socials */
+
+ul.xarxes {
+  list-style: none;
+  text-decoration: none;
+  grid-area: 2 / 3 / 3 / 4;
+  padding: 0 2rem;
+}
+
+ul.xarxes li {
+  display: inline-block;
+  color: var(--verd);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  transition: all .5s ease-in-out; /* transició sempre en l'estat de repòs */
+  position: relative;
+}
+
+ul.xarxes li a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--verd);
+}
+
+ul.xarxes li ul {
+  display: none;
+}
+
+ul.xarxes li:hover {
+  cursor: pointer;
+  color: rgb(169, 169, 169);
+}
+ul.xarxes li a:hover {
+  cursor: pointer;
+  color: rgb(169, 169, 169);
+}
+ul.xarxes li:hover ul {
+  display: block;
+  margin-top: 0.625rem;
+  width: 200px;
+  position: absolute;
+  left: 0;
+}
+ul.xarxes li.youtube:hover ul {
+  display: block;
+  margin-top: 0.625rem;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  margin-left: auto; /* Sinó, sobresurt per la dreta */
+}
+ul.xarxes li:hover ul li {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin: 0;
+}
+ul.xarxes li:hover ul li span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem; /* 14px = 0.875rem */
+  font-style: normal;
+  font-weight: 300;
+  color: var(--verd);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+  padding: 0.625rem;
+}
+ul.xarxes li.youtube:hover ul li span {
+  text-transform: none;
+}
+
+ul.xarxes li:hover ul li:hover {
+  color: rgb(169, 169, 169);
+}
+ul.xarxes li:hover ul li:hover span {
+  color: rgb(169, 169, 169); /* Si no especifico span, el text no es torna gris en fer hover */
+}
+
+div#om {
+  grid-area: 1 / 1 / 3 / 2;
+  background-image: url(../img/Ooom-petit-70-100x100-ok.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  display: none;
+}
+
+/* Botó closebtn */
+div.closebtn {
+  grid-area: 2 / 4 / 3 / 5;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: var(--verd);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  transition: all .5s ease-in-out;
+}
+
+/* Botó closebtn: padding lateral al span permet donar més superfície de contacte amb el dit */
+div.closebtn span {
+  padding: 0 8px;
+}
+
+div.closebtn:hover {
+  color: rgb(169, 169, 169);
+  cursor: pointer;
+}
+
+/** MQs navbar **/
+
+/* &&&&& MQs 992px = 62rem */
+@media only screen and (max-width: 991.98px) {
+  ul.bar, ul.xarxes {
+    padding: 0 1rem;
+  }
+  ul.bar li {
+    padding: 10px 0.5rem;/* Passo padding 0.625rem a 10px, per donar més alçada relativa per tamanys petits */
+    font-weight: 400;
+  }
+  ul.bar li p {
+    font-weight: 400;
+  }
+  ul.xarxes li {
+    padding: 9px;
+  }
+}
+
+/* &&&&& MQs 576px Reestructuració barra: "x" a dalt, simplificació textos barra (duplicació barra #bar-laptop) i eliminació símbol omm omm controlat per JS */
+@media only screen and (max-width: 575.98px) {
+  /* graella 5 col. 2 files */
+  div.grid-barra-flot {
+    grid-template-columns: 1fr auto auto auto 1fr;
+    grid-template-rows: auto auto;
+  }
+  div.centres-barra {
+    margin: 0 auto;
+    padding: 5px 0;
+    grid-area: 1 / 2 / 2 / 5;
+  }
+  div.closebtn {
+    padding-top: 5px;
+  }
+
+  div#navbar {
+    display: none;
+  }
+
+  div#mobile-navbar {
+    display: block;
+  }
+
+  ul#bar-mobil {
+    padding: 0;
+    grid-area: 2 / 1 / 3 / 6;
+  }
+  ul#bar-mobil li {
+    padding: 8px 0.4rem;
+    font-weight: 400;
+  }
+
+  ul#bar-mobil li ul {
+    margin-top: 0.2rem;
+    width: 8rem;
+  }
+  ul#bar-mobil li#xarxes-mobil {
+    position: relative;
+  }
+  ul#bar-mobil li#xarxes-mobil ul {
+    position: absolute;
+    right: 0;
+    width: 12rem;
+    margin-left: auto; /* Per evitar que sobresurti per la dreta */
+  }
+  ul#bar-mobil li#xarxes-mobil ul li {
+    text-transform: none;
+  }
+  ul#bar-mobil li#xarxes-mobil ul li span {
+    padding-left: 0.625rem;
+  }
+
+  div.closebtn {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+}
+
+
+/* Botó-Imago flotant lateral dret, per obrir barra navegació */
+div.menu {
+  height: 4vw;
+  width: 4vw;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 1.7vw;
+  right: 2vw;
+  z-index: 1;
+  display: none;
+}
+div.menu img {
+  height: 4vw;
+  width: 4vw;
+}
+div.menu:hover img {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* &&&&& MQs Acotació distància lateral botó menu per pantalles molt grans. */
+@media only screen and (min-width:1201px) {
+  /*Per >1200 --> distància fixa a la vora dreta = 30px */
+  div.menu {
+    right: calc(50vw - 570px);
+  }
+  /*Passo tamany del botó a pixels, per desvincular-lo de l'amplada de pantalla */
+  div.menu img {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+/* &&&&& MQs 992px Botó menú: més gran */
+@media only screen and (max-width: 991.98px) {
+  div.menu {
+    height: 36px;
+    width: 36px;
+    top: 8px;
+    right: 8px;
+  }
+  div.menu img {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+
+/* SLIDESHOW */
+.slideshow-container {
+  max-width: 100%;
+  height: 100vh;
+}
+
+/* &&&&& MQs Limitació amplada màxima per pantalles molt grans >1200px */
+@media only screen and (min-width:1201px) {
+  .slideshow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%; /* Important: limitar amplada de les imatges, sinó sobresurten lateralment */
+}
+
+div#slide1 {
+  background-image: url(../img/ElPou-Virabadasana2-Enric-1200x800.jpg);
+  height: 100vh;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+}
+
+div#slide2 {
+  background-image: url(../img/Tribuna-UtitaParsvakonasana-1200x800.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+div#slide3 {
+  background-image: url(../img/Tribuna-Padmasana-1200x800.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+div#slide4 {
+  background-image: url(../img/ElPou-Salabasana-1200x800.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+div#slide5 {
+  background-image: url(../img/Tribuna-Grup-1200x800.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* &&&&& MQs Limitació amplada màxima per pantalles molt grans >1200px */
+@media only screen and (min-width:1201px) {
+  .mySlides {
+    max-width: 1200px;
+  }
+}
+
+/* &&&&& MQs Canvi imatges per formats verticals */
+@media only screen and (orientation: portrait) {
+  div#slide1 {
+    background-image: url(../img/IMG_1131-V-600x900.jpg);
+  }
+  div#slide2 {
+    background-image: url(../img/IMG_1640-V-600x900.jpg);
+  }
+  div#slide4 {
+    background-image: url(../img/IMG_1750-V-600x900.jpg);
+  }
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* LOGO + CENTRES part inferior */
+
+div.container-logo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25vh;
+  margin: 0;
+  border-top: 1px solid var(--verd);
+  border-bottom: 1px solid var(--verd);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+div.seus-logo {
+  margin: 0 auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-rows: 18vh 7vh;
+}
+div.seus {
+  padding: 0 2rem;
+  align-self: center;
+}
+div.seus h2 {
+  padding-top: 2rem;
+}
+div.seus p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+div.seu1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div.logo {
+  grid-area: 1 / 3 / 2 / 4;
+  padding: 0 2rem;
+}
+div.logo img {
+  max-height: 100%;
+}
+div.seu2 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+div.subtitol {
+  grid-area: 2 / 2 / 2 / 5;
+  align-self: center;
+}
+div.subtitol h5 {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  word-spacing: 2rem;
+  padding-left: 1rem; /* Per compensar desplaçament provocat pel letter-spacing */
+}
+
+/* &&&&& MQs 576px LOGO INFERIOR: Redistribució òptima d'elements */
+@media only screen and (max-width: 575.98px) {
+  div.seus-logo {
+    grid-template-columns: 25% 37% 37%;
+    grid-template-rows: 9vh 9vh 7vh;
+  }
+  div.logo {
+    grid-area: 1 / 1 / 3 / 2;
+    padding: 1rem;
+  }
+  div.seu1 {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+  div.seu2 {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+  div.subtitol {
+    grid-area: 3 / 1 / 4 / 4;
+    align-self: center;
+  }
+  div.subtitol h5 {
+    letter-spacing: 0.5rem;
+    word-spacing: 1rem;
+    padding-left: 0.5rem; /* Per compensar desplaçament provocat pel letter-spacing */
+  }
+}
+
+
+
+/*** A2. Parallax ########################***/
+
+div.contingut-parallax {
+  width: 100%;
+  padding: 0 20%;
+  display: table;
+}
+
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+div.fons-a2 {
+  position: relative;
+  height: 100vh;
+}
+div.fons-a2::before {
+  background-image: url(../img/rawpixel-771284-sipia-1200.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+div.auxiliar {
+  position: relative; /*IMPORTANTÍSSIM!!! Sinó, no rutlla */
+  margin: 0;
+  padding: 1.25rem 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+div.orla-parallax {
+  padding: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(../img/Logo-LaTribuna-petit-20.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.text-parallax {
+  padding: 1rem 2rem;
+  border: 1px solid var(--verd);
+}
+
+div.auxiliar h4 {
+  font-style: italic;
+  margin: 1rem 0;
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
+div.auxiliar p{
+  text-align: right;
+}
+
+
+
+/*** B. Section IOGA IYENGAR ################***/
+
+div.grid-iyengar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.presentacio {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+div.pretenem {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+div#img-iyengar-1 {
+  grid-area: 1 / 2 / 2 / 3;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+div#img-iyengar-1 img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+  transition: all .5s ease-in-out;
+}
+div#img-iyengar-1:hover img {
+  transform: scale(1.1);
+}
+
+div#img-iyengar-1 h5 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding: 10px;
+  margin: 0;
+  background-color: var(--grisclar);
+  width: 100%; /* fa que prengui tot l'espai disponible */
+  display: none;
+}
+div#img-iyengar-1:hover h5 {
+  display: block;
+}
+
+div#img-iyengar-2 {
+  grid-area: 2 / 1 / 3 / 2;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+div#img-iyengar-2 img {
+  max-width: 100%;
+  height: auto;
+  transition: all .5s ease-in-out;
+}
+div#img-iyengar-2:hover img {
+  transform: scale(1.1);
+}
+div#img-iyengar-2 h5 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding: 10px;
+  margin: 0;
+  background-color: var(--grisclar);
+  width: 100%; /* fa que prengui tot l'espai disponible */
+  display: none;
+}
+div#img-iyengar-2:hover h5 {
+  display: block;
+}
+
+/* Atributs duplicats per versions hover i no-hover */
+div.img-iyengar-laptop div.ampliar {
+  display: none;
+}
+div.img-iyengar-laptop h6.pastilla {
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+/* MQs per DISPOSITIUS TÀCTILS */
+@media (hover: none) {
+  div.img-iyengar-laptop div.ampliar,
+  div.img-iyengar-laptop h6.pastilla {
+    display: block;
+  }
+}
+
+
+div#img-iyengar-3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+div#img-iyengar-3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-iyengar-4 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+div#img-iyengar-4 img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.img-iyengar-mob {
+  display: none;
+  position: relative;
+}
+
+/* Icona ampliar "+" per mòbil */
+/* Assigno classe genèrica pel símbol, però animacions individualitzades via id, sinó, només en rutlla la primera */
+div.ampliar {
+  z-index: 1;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid var(--verd);
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+div.ampliar p {
+  color: var(--verd);
+  font-size: 30px!important;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 3px 0 0 0;
+}
+/* Animació */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0%   {background-color: rgba(255, 255, 255, 1);}
+  50%  {background-color: var(--verdmoltclar);}
+  100% {background-color: rgba(255, 255, 255, 1);}
+}
+@keyframes mymove {
+  0%   {background-color: rgba(255, 255, 255, 1);}
+  50%  {background-color: var(--verdmoltclar);}
+  100% {background-color: rgba(255, 255, 255, 1);}
+}
+
+div.img-iyengar-mob img {
+  max-width: 100%;
+  height: auto;
+}
+div.img-iyengar-mob a,
+div.img-iyengar-laptop a {
+  text-decoration: none;
+}
+
+
+/* &&&&& MQs 576px B. Section IOGA IYENGAR --> Passem text a una columna */
+@media only screen and (max-width: 575.98px) {
+  div.presentacio {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  div#img-iyengar-1,
+  div#img-iyengar-2,
+  div#img-iyengar-3,
+  div#img-iyengar-4 {
+    display: none;
+  }
+
+  div.img-iyengar-mob {
+    display: block;
+  }
+  div#img-iyengar-mob-1 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  div#img-iyengar-mob-2 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  div.pretenem {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+}
+
+
+
+/*** B2. Parallax ########################***/
+
+div.fons-b2 {
+  position: relative;
+  height: 100vh;
+}
+div.fons-b2::before {
+  background-image: url(../img/kelly-russo-1154035-sip1200.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+
+
+/*** C. Section ELS CENTRES #################***/
+
+div.grid-centres {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.intro-centres {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+div.historia {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+div.historia-2 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+div#img-centres-1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div#img-centres-1 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-centres-2 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+div#img-centres-2 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-centres-3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+div#img-centres-3 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-centres-4 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+div#img-centres-4 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-centres-5 {
+  display: none; /* Només x mòbil */
+}
+
+/*  &&&&& MQs 768px = 48rem Pasem a 2 columnes */
+@media only screen and (max-width: 767.98px) {
+  div.grid-centres {
+    grid-template-columns: 1fr 1fr;
+  }
+  div#img-centres-2,
+  div#img-centres-4 {
+    display: none;
+  }
+  div.historia {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+
+/* &&&&& MQs 576px B. Section IOGA IYENGAR --> Passem text a una columna i canviem d'imatges */
+@media only screen and (max-width: 575.98px) {
+  div#img-centres-1,
+  div#img-centres-2,
+  div#img-centres-3,
+  div#img-centres-4 {
+    display: none;
+  }
+  div.intro-centres {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  div#img-centres-5 {
+    display: block;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  div#img-centres-5 img{
+    max-width: 100%;
+    height: auto;
+  }
+  div.historia {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  div.historia-2 {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+}
+
+/* El Pou */
+
+div.pou {
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--grisclar);
+}
+
+/* Per ajustar scroll auto a partir de click link dropdown, necessitem padding superior */
+h4.h4-centres {
+  margin: 0 0 2rem 0;
+  padding: 3rem 0 0 0;
+}
+
+div.grid-figueres {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+div.caracter-figueres {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+div.localit-figueres {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+div#mapa-figueres {
+  grid-area: 3 / 2 / 4 / 3;
+  overflow: hidden;
+}
+
+div#img-figueres-1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div#img-figueres-1 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-figueres-2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+div#img-figueres-2 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-figueres-3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+div#img-figueres-3 img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* &&&&& MQs 576px FIGUERES --> passem a 1 columna i eliminem algunes fotos */
+@media only screen and (max-width: 575.98px) {
+  div#img-figueres-1 {
+    display: none;
+  }
+  div.caracter-figueres {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  div#img-figueres-2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  div#img-figueres-3 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  div.localit-figueres {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  div#mapa-figueres {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+}
+
+
+/* La Tribuna */
+
+div.tribuna {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--grisclar);
+}
+
+div.grid-olot {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+div.caracter-olot {
+  grid-area: 1 / 1 / 2 / 2;
+  overflow: hidden;
+}
+
+div.localit-olot {
+  grid-area: 3 / 1 / 4 / 2;
+  overflow: hidden;
+}
+
+div#mapa-olot {
+  grid-area: 3 / 2 / 4 / 3;
+  overflow: hidden;
+}
+
+div#img-olot-1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div#img-olot-1 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-olot-2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+div#img-olot-2 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div#img-olot-3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+div#img-olot-3 img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* &&&&& MQs 576px OLOT --> passem a 1 columna i eliminem algunes fotos */
+@media only screen and (max-width: 575.98px) {
+  div#img-olot-1 {
+    display: none;
+  }
+  div.caracter-olot {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  div#img-olot-2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  div#img-olot-3 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  div.localit-olot {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  div#mapa-olot {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+}
+
+
+
+/*** C2. Parallax ########################***/
+
+div.fons-b2 {
+  position: relative;
+  height: 100vh;
+}
+div.fons-b2::before {
+  background-image: url(../img/Tribuna-Om-1200.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+
+
+/*** D. Section EQUIP DOCENT #############***/
+
+div.grid-equip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.equip-img {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Oculto elements x formats mòbil */
+div.equip-img div.ampliar,
+div.equip-img h6 {
+  display: none;
+}
+
+div.equip-logo {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div.equip-logo img {
+  max-width: 100%;
+}
+
+div.equip-img img {
+  max-width: 100%;
+  /* per passar a escala de grisos --> propietat filter */
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all .5s ease-in-out; /* transició sempre en l'estat de repòs */
+}
+
+div.equip-img:hover {
+  cursor: pointer;
+}
+
+/* en fer hover volem que la imatge torni a tenir color */
+div.equip-img:hover img {
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+  transform: scale(1.1); /* l'efecte escala es declara en hover */
+}
+
+div.equip-img h5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.7rem;
+  margin: 0;
+  background-color: var(--grisclar);
+  width: 100%; /* fa que prengui tot l'espai disponible */
+  display: none;
+}
+div.equip-img:hover h5 {
+  display: block;
+}
+
+/*  &&&&& MQs 768px = 48rem Passem a 2 columnes */
+@media only screen and (max-width: 767.98px) {
+  div.grid-equip {
+    grid-template-columns: 1fr 1fr;
+  }
+  div.equip-logo {
+    grid-area: 3 / 2 / 4 / 3; /* logo a baix de tot */
+  }
+}
+
+/* &&&&& MQs 576px EQUIP --> Canvi efecte hover x animació "ampliar", poso imatges d'entrada a color */
+/* Val tant per formats mòbils com per dispositius tàctils --> Media Query DOBLE! */
+@media only screen and (max-width: 575.98px), (hover: none) {
+  div.equip-img img {
+    -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
+  }
+
+  div.equip-img h5 {
+    display: none;
+  }
+
+  div.equip-img div.ampliar,
+  div.equip-img h6 {
+    display: block;
+  }
+}
+
+
+/* Finestra modal equip */
+
+div.equip-text {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: calc(50vw - 40vmin);
+  top: calc(50vh - 40vmin);
+  width: 80vmin;
+  max-height: 80vmin;
+  overflow: auto;
+  background-color: var(--grisclar);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem 2rem;
+}
+
+/* The Close Button */
+.close {
+  color: var(--verd);
+  position: fixed;
+  z-index: 2;
+  top: 11.5vh;
+  right: calc(52vw - 40vmin);
+  font-size: 1.875rem; /* 30px */
+  font-weight: bold;
+  transition: 0.6s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.equip-text img {
+  max-width: 40vmin;
+  float: left;
+  margin: 0 1rem 0 0;
+}
+
+/* &&&&& MQs Canvi tamany finestra modal per formats verticals */
+@media only screen and (orientation: portrait) {
+  div.equip-text {
+    left: 5vw;
+    top: 10vh;
+    width: 90vw;
+    max-height: 85vh;
+  }
+  .close {
+    top: 11vh;
+  }
+}
+
+
+
+/*** D2. Parallax ########################***/
+
+div.fons-d2 {
+  position: relative;
+  height: 100vh;
+}
+div.fons-d2::before {
+  background-image: url(../img/Tribuna-PrasaritaPadauta1200.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+
+
+
+/*** E. Section INFORMACIÓ #############***/
+
+div.apartats-info {
+  padding: 4rem 0 2rem 0;
+  border-bottom: 1px solid var(--verd);
+}
+
+div.img-info img {
+  max-width: 100%;
+  height: auto;
+  display: none;
+}
+
+/* &&&&& MQs 576px INFORMACIÓ --> Elimino filet separador d'apartats i el reemplaço per fotos apaisades */
+@media only screen and (max-width: 575.98px) {
+  div.apartats-info {
+    border-bottom: none;
+  }
+  div.img-info img {
+    display: block;
+  }
+}
+
+/** Calendari **/
+
+div.grid-calendari {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.text-calendari {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+div#imatge-calendari {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div#imatge-calendari img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* &&&&& MQs 576px CALENDARI --> Elimino fotos interiors i text a 1 columna */
+@media only screen and (max-width: 575.98px) {
+  div.grid-calendari {
+    grid-template-columns: 1fr;
+  }
+  div#imatge-calendari {
+    display: none;
+  }
+}
+
+/** Horari **/
+
+div.grid-horari {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+/*  &&&&& MQs 768px = 48rem Passem Horari a 1 columna, sinó desborda per amplada */
+@media only screen and (max-width: 767.98px) {
+  div.grid-horari {
+    grid-template-columns: 1fr;
+  }
+}
+
+div.grid-2horaris {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  text-align: center!important;
+  grid-gap: 0px;
+}
+
+div.horari-centres {
+  background-color: var(--grisclar);
+  border: 0.5px solid var(--grisclar);
+  padding: 0.8rem;
+}
+div.horari-centres h5 {
+  text-align: center;
+}
+div.grid-2horaris div {
+  border: 0.5px solid var(--gris);
+  padding: 0.3rem;
+  background-color: rgba(255, 255, 255, 1);
+}
+div.grid-2horaris h6 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+div.grid-2horaris p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Correccions Taula horaris x formats petits: */
+/* &&&&& MQs 992px = 62rem */
+@media only screen and (max-width: 991.98px) {
+  div.grid-2horaris div {
+    padding: 0.3rem 0.15rem;
+  }
+  div.grid-2horaris h6 {
+    text-transform: none;
+  }
+}
+
+div.info-horari p {
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+
+/** Tarifes **/
+
+div.grid-tarifes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* div.tipus-tarifes copiat de .horari-centres */
+div.tipus-tarifes {
+  background-color: var(--grisclar);
+  border: 0.5px solid var(--grisclar);
+  padding: 0.8rem;
+  padding-top: 0;
+}
+
+div#molt-important {
+  border: 1px solid var(--verd);
+}
+div#molt-important h5 {
+  font-weight: 400;
+}
+
+/* Assignant les cel·les de les imatges, les vinyetes d'informació es distribueixen per ordre en les cel·les restants */
+div#img-tarifes-1 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+div#img-tarifes-2 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+div#img-tarifes-3 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+div#img-tarifes-4 {
+  display: none;
+}
+div.img-tarifes img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* &&&&& MQs 768px = 48rem Tarifes: Passem de 3 a 2 columnes */
+@media only screen and (max-width: 767.98px) {
+  div.grid-tarifes {
+    grid-template-columns: 1fr 1fr;
+  }
+  div#img-tarifes-1 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  div#img-tarifes-2 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  div#img-tarifes-3 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  div#img-tarifes-4 {
+    display: block;
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  div#molt-important {
+    grid-area: 7 / 1 / 8 / 3;
+  }
+}
+
+/* &&&&& MQs 576px TARIFES --> Elimino fotos interiors i text a 1 columna */
+@media only screen and (max-width: 575.98px) {
+  div.grid-tarifes {
+    grid-template-columns: 1fr;
+  }
+  div#img-tarifes-1,
+  div#img-tarifes-2,
+  div#img-tarifes-3,
+  div#img-tarifes-4 {
+    display: none;
+  }
+  div#molt-important { /* Si no ho definim, es mantenen les 2 columnes (!) */
+    grid-area: 9 / 1 / 10 / 2;
+  }
+}
+
+
+/** Consells **/
+
+div.grid-consells {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.text-consells-1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+div#img-consells-1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+div.img-consells img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+div#img-consells-2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+div.text-consells-2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+div#practica {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+div#img-consells-3 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+div#img-consells-5 {
+  display: none;
+}
+
+/* &&&&& MQ 768px = 48rem Consells: redistribució blocs de text i imatges intercalades */
+@media only screen and (max-width: 767.98px) {
+  div#img-consells-1,
+  div#img-consells-2,
+  div#img-consells-3,
+  div#img-consells-4 {
+    display: none;
+  }
+  div.text-consells-1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  div.text-consells-2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  div#img-consells-5 {
+    display: block;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  div#img-consells-5 img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  div#practica {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  div#vestidors {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+/* &&&&& MQs 576px CONSELLS --> Elimino fotos interiors i text a 1 columna */
+@media only screen and (max-width: 575.98px) {
+  div.grid-consells {
+    grid-template-columns: 1fr;
+  }
+  div#img-consells-5 {
+    display: none;
+  }
+  div.text-consells-1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  div.text-consells-2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  div#practica {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  div#vestidors {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+}
+
+
+/** Material **/
+
+div.grid-material {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.materials {
+  background-color: var(--grisclar);
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+div.material-descrip img {
+  max-width: 45%;
+  height: auto;
+  float: left;
+  margin: 0 1rem 0 0;
+}
+
+div.material-descrip p {
+  margin-top: 0;
+}
+
+/* Eliminar border-bottom que fica .apartats-info */
+div#bibliografia {
+  border-bottom: 0px;
+}
+
+/* &&&&& MQs 576px MATERIAL --> 1 SOLA COLUMNA */
+@media only screen and (max-width: 575.98px) {
+  div.grid-material {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/*** E2. Parallax ########################***/
+
+div.fons-e2 {
+  position: relative;
+  height: 100vh;
+}
+div.fons-e2::before {
+  background-image: url(../img/Tribuna-Danurasana-1200.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+
+
+/*** F. Section FAQS #############***/
+
+div.grid-faqs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+/* Links interns secció FAQs */
+div.grid-faqs a {
+  list-style: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+div.grid-faqs a:hover {
+  color: rgb(169, 169, 169);
+}
+
+/* Afegeixo marge superior per separar apartats */
+h5.FAQs-h5 {
+  margin-top: 1.5rem;
+}
+
+div#img-faqs-1 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+div#img-faqs-1 img{
+  max-width: 100%;
+  height: auto;
+}
+
+div.FAQs-A {
+  grid-area: 3 / 1 / 5 / 2;
+}
+
+div.FAQs-B {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+div#img-faqs-2 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+div.img-faqs img{
+  max-width: 100%;
+  height: auto;
+}
+
+div.FAQs-C {
+  grid-area: 5 / 1 / 6 / 2;
+}
+
+div.FAQs-D {
+  grid-area: 5 / 2 / 9 / 3;
+}
+
+div#img-faqs-3 {
+  grid-area: 6 / 1 / 7 / 2;
+}
+
+div#img-faqs-4 {
+  grid-area: 7 / 1 / 8 / 2;
+}
+
+div#img-faqs-5 {
+  grid-area: 8 / 1 / 9 / 2;
+}
+
+div.FAQs-E {
+  grid-area: 9 / 1 / 11 / 2;
+}
+
+div.FAQs-F {
+  grid-area: 9 / 2 / 10 / 3;
+}
+
+div#img-faqs-6 {
+  grid-area: 10 / 2 / 11 / 3;
+}
+
+/* Elimino filet inferior que surt per defecte */
+section#faqs div.reticula {
+  border-bottom: none;
+}
+
+/* @@@@@ MQs per DISPOSITIUS TÀCTILS */
+/* Elimino llistat introductori .llistat-FAQs , per evitar taps complicats no necessaris */
+@media (hover: none) {
+  div.llistat-FAQs {
+    display: none;
+  }
+  div#img-faqs-1 {
+    display: none;
+  }
+}
+
+/* &&&&& MQs 576px FAQs --> 1 SOLA COLUMNA */
+/* Elimino llistat introductori .llistat-FAQs , per evitar taps complicats no necessaris */
+@media only screen and (max-width: 575.98px) {
+  div.grid-faqs {
+    grid-template-columns: 1fr;
+  }
+  div.llistat-FAQs {
+    display: none;
+  }
+  div#img-faqs-2,
+  div#img-faqs-3,
+  div#img-faqs-4,
+  div#img-faqs-5,
+  div#img-faqs-6 {
+    display: none;
+  }
+
+  div.FAQs-A {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  div.FAQs-B {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  div.FAQs-C {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  div#img-faqs-1 {
+    display: block; /* Compte: que en la MQ Tactil he dit display: none --> s'ha de reactivar!! */
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  div.FAQs-D {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+
+  div.FAQs-E {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+
+  div.FAQs-F {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+}
+
+
+
+/*** F2. Parallax ########################***/
+
+div.fons-f2 {
+  position: relative;
+  height: 100vh;
+}
+div.fons-f2::before {
+  background-image: url(../img/Tribuna-Danurasana-1200.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+
+
+/*** G. Section RECEPTES #################***/
+
+div.grid-receptes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div#img-receptes-1-mobil {
+  width: 100%;
+  display: none;
+}
+div#img-receptes-1-mobil img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* &&&&& MQs 576px RECEPTES --> 1 SOLA COLUMNA */
+@media only screen and (max-width: 575.98px) {
+  div.grid-receptes {
+    grid-template-columns: 1fr;
+  }
+  div#img-receptes-1 {
+    display: none;
+  }
+  div#img-receptes-1-mobil {
+    display: block;
+  }
+}
+
+
+div.titol-receptari h3 {
+  margin: 0;
+  padding: 0.5rem;
+  letter-spacing: 0.5rem;
+}
+
+div.tira-quadres {
+  width: 100%;
+  height: 32px;
+  background-image: url(../img/Estovalles-retall.jpg);
+  background-repeat: repeat;
+  background-position: top center;
+  border-top: 1px solid var(--verd);
+  border-bottom: 1px solid var(--verd);
+}
+
+div.classif-receptes {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+div.classif-receptes h4 {
+  margin: 0;
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+div.receptari {
+  margin: 0;
+  padding: 2rem;
+  width: auto;
+  height: auto;
+  background-image: url(../img/Estovalles-retall.jpg);
+  background-repeat: repeat;
+  background-position: top center;
+  border-top: 1px solid var(--verd);
+  border-bottom: 1px solid var(--verd);
+}
+
+div.grid-receptari {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+
+div.plats-receptari {
+  position: relative; /* Sinó icona ampliar no rutlla */
+}
+
+/* Icona ampliar format mòbil, oculta */
+div.plats-receptari div.ampliar {
+  display: none;
+}
+
+div.plats-receptari img {
+  max-width: 100%;
+  height: auto;
+  transition: all .5s ease-in-out;
+}
+div.plats-receptari:hover img {
+  cursor: pointer;
+  transform: scale(1.05 ); /* l'efecte escala es declara en hover */
+  /* box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.19); */
+}
+div.nom-plat {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  padding: 0.2rem;
+}
+div.nom-plat h5 {
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0.2rem;
+  color: rgba(0, 0, 0, 1);
+}
+div.nom-plat p {
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0.2rem;
+}
+
+
+
+/* &&&&& MQ 768px = 48rem RECEPTARI: redistribució plats de 3 a 2 columnes */
+@media only screen and (max-width: 767.98px) {
+  div.grid-receptari {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/* @@@@@ MQs DISPOSITIUS TÀCTILS --> Icona "ampliar" */
+@media (hover: none) {
+  div.plats-receptari div.ampliar {
+    display: block;
+  }
+}
+
+/* &&&&& MQs 576px RECEPTARI --> 1 SOLA COLUMNA */
+@media only screen and (max-width: 575.98px) {
+  div.grid-receptari {
+    grid-template-columns: 1fr;
+  }
+  div.plats-receptari div.ampliar {
+    display: block;
+  }
+}
+
+
+
+/* Finestra modal recepta */
+
+div.plat-text {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: calc(50vw - 45vmin);
+  top: calc(50vh - 45vmin);
+  width: 90vmin;
+  height: 90vmin;
+  overflow: auto;
+  background-color: var(--grisclar);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+/* The Close Button - Botó flotant */
+.close-recep {
+  color: var(--verd);
+  position: fixed;
+  z-index: 2;
+  top: calc(60vh - 45vmin);
+  right: calc(51vw - 45vmin);
+  font-size: 1.875rem; /* 30px */
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--grisclar);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  padding-bottom: 0.8rem;
+  transition: 0.6s ease;
+}
+
+.close-recep:hover,
+.close-recep:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.plat-text div.tira-quadres {
+  width: 100%;
+  height: 64px;
+  background-image: url(../img/Estovalles-retall.jpg);
+  background-repeat: repeat;
+  background-position: top left;
+  border: none;
+}
+
+div.plat-text h3 {
+  text-align: left;
+  width: 60%;
+  margin: 0 auto 0 0;
+  padding: 4rem 2rem 1rem 2rem;
+  border: none;
+}
+
+div.plat-text img {
+  width: 100%;
+  height: auto;
+}
+
+div.descrip-recepta {
+  padding: 1rem 2rem;
+}
+
+div.ingredients {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+div.ingredients div {
+  width: 50%;
+  float: left;
+}
+div.ingredients img {
+  width: 50%;
+  height: auto;
+  float: right;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+div.pdf {
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-top: 1px solid var(--verd);
+}
+div.pdf h5 {
+  margin-top: 4rem;
+}
+div.pdf p {
+  font-size: 5rem;
+  text-align: center;
+  color: var(--verd);
+  margin: 2.5rem auto;
+  cursor: pointer;
+}
+div.pdf p i {
+  font-size: 5rem; /* sinó passen coses rares en reduir el tamany de pantalla */
+}
+
+/* &&&&& MQs PORTRAIT RECEPTA --> Canvi tamany finestra modal per formats verticals */
+@media only screen and (orientation: portrait) {
+  div.plat-text {
+    left: 5vw;
+    top: 5vh;
+    width: 90vw;
+    height: 90vh;
+  }
+  .close-recep {
+    top: 15vh;
+}
+
+/* &&&&& MQs 576px RECEPTA --> 1 SOLA COLUMNA */
+@media only screen and (max-width: 575.98px) {
+  div.ingredients div {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* ==================================================
+Helper classes
+=============================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
